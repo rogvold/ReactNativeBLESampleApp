@@ -1,0 +1,47 @@
+{
+  "name": "BLEMobileApp",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "jest-expo": "^21.0.2",
+    "react-native-scripts": "1.5.0",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "debounce": "^1.0.2",
+    "expo": "^20.0.0",
+    "immutable": "^3.8.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "parse": "^1.10.0",
+    "react": "16.0.0-alpha.12",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz",
+    "react-native-gifted-chat": "^0.2.7",
+    "react-native-gifted-form": "^0.1.0",
+    "react-native-keyboard-spacer": "^0.3.1",
+    "react-native-modal-datetime-picker": "^4.11.0",
+    "react-native-pathjs-charts": "https://github.com/rogvold/react-native-pathjs-charts.git",
+    "react-native-scrollable-tab-view": "^0.6.7",
+    "react-native-svg": "^6.0.0-rc1",
+    "react-navigation": "^1.0.0-beta.13",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "redux-persist": "^4.8.2",
+    "redux-persist-transform-immutable": "^4.3.0",
+    "redux-thunk": "^2.2.0",
+    "uuid": "^3.1.0",
+    "validator": "^8.2.0"
+  }
+}
