@@ -212,3 +212,7 @@ export const SET_SCREEN = 'SET_SCREEN'
 export const SET_MODE = 'SET_MODE'
 
 
+//bluetooth
+export const INIT_BLUETOOTH = 'INIT_BLUETOOTH'
+export const INIT_BLUETOOTH_SUCCESS = 'INIT_BLUETOOTH_SUCCESS'
+export const INIT_BLUETOOTH_FAIL = 'INIT_BLUETOOTH_FAIL'

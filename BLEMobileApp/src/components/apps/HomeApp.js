@@ -1,7 +1,8 @@
 /**
  * Created by sabir on 10.10.17.
  */
-
+ import * as mvConstants from '../../constants/mvConsts'
+ const {width, height} = mvConstants.window;
 
  import React, {PropTypes} from 'react';
  import {connect} from 'react-redux';
@@ -57,6 +58,9 @@
      }
 
      render = () => {
+         let { nav, isActive, routeName} = this.props;
+         console.log('HomeApp: render: isActive = ', isActive);
+         console.log('HomeApp: render: routeName = ', routeName);
 
          return (
              <View style={styles.container} >
@@ -78,22 +82,20 @@
 
  });
 
+ const mapStateToProps = (state, ownProps) => {
+    return {
+        nav: state.nav,
+        routeName: ownProps.navigation.state.routeName,
+        isActive: (ownProps.navigation.state.routeName == 'Home')
+    }
+ }
 
- //const mapStateToProps = (state) => {
- //    return {
- //        currentUserId: state.users.currentUserId,
- //        loading: state.users.loading
- //    }
- //}
+ const mapDispatchToProps = (dispatch) => {
+    return {
 
- //const mapDispatchToProps = (dispatch) => {
- //    return {
- //        onLogout: (data) => {
- //            dispatch(actions.logOut())
- //        }
- //    }
- //}
+    }
+ }
 
- //HomeApp = connect(mapStateToProps, mapDispatchToProps)(HomeApp)
+ HomeApp = connect(mapStateToProps, mapDispatchToProps)(HomeApp)
 
  export default HomeApp

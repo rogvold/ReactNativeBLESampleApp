@@ -1,7 +1,6 @@
 /**
  * Created by sabir on 10.10.17.
  */
-
 import * as mvConstants from '../../constants/mvConsts'
 const {width, height} = mvConstants.window;
 
@@ -37,11 +36,7 @@ const { StatusBarManager } = NativeModules;
 
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-import { NavigationActions } from 'react-navigation';
-
-import HeartAnimationComponent from '../animations/HeartAnimationComponent'
-
-class InitialApp extends React.Component {
+class SettingsApp extends React.Component {
 
     static defaultProps = {}
 
@@ -55,36 +50,24 @@ class InitialApp extends React.Component {
     }
 
     componentDidMount() {
-        Expo.ScreenOrientation.allow('PORTRAIT_UP');
-        let {goHome} = this.props;
-        setTimeout(() => {
-            goHome()
-        }, 3000)
+
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.isActive != this.props.isActive){
+    componentWillReceiveProps() {
 
-        }
     }
 
     render = () => {
-        let {goHome, nav, isActive, routeName} = this.props;
-        console.log('InitialApp: render: isActive = ', isActive);
-        console.log('InitialApp: render: routeName = ', routeName);
-        console.log('InitialApp: render: nav = ', nav);
+        let { nav, isActive, routeName} = this.props;
+        console.log('SettingsApp: render: isActive = ', isActive);
+        console.log('SettingsApp: render: routeName = ', routeName);
 
         return (
             <View style={styles.container} >
 
-                <View>
-
-                </View>
-
-                {isActive == false ? null :
-                    <HeartAnimationComponent />
-                }
-
+                <Text>
+                    Settings App
+                </Text>
 
             </View>
         )
@@ -99,26 +82,20 @@ var styles = StyleSheet.create({
 
 });
 
-
 const mapStateToProps = (state, ownProps) => {
-   return {
+    return {
         nav: state.nav,
         routeName: ownProps.navigation.state.routeName,
-        // isActive: (ownProps.navigation.state.routeName == 'Initial')
-        isActive: (state.nav.routes[state.nav.index].routeName == 'Initial')
-   }
+        isActive: (ownProps.navigation.state.routeName == 'Home')
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
-   return {
-       goHome: () => {
-           return dispatch(NavigationActions.navigate({
-               routeName: 'Home'
-           }))
-       }
-   }
+    return {
+
+    }
 }
 
-InitialApp = connect(mapStateToProps, mapDispatchToProps)(InitialApp)
+SettingsApp = connect(mapStateToProps, mapDispatchToProps)(SettingsApp)
 
-export default InitialApp
+export default SettingsApp
