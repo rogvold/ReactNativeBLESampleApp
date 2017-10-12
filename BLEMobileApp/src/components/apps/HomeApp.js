@@ -36,6 +36,8 @@
 
  import Icon from 'react-native-vector-icons/FontAwesome'
 
+ import BluetoothDevicesPanel from '../bluetooth/panels/BluetoothDevicesPanel'
+
  class HomeApp extends React.Component {
 
      static defaultProps = {}
@@ -65,9 +67,6 @@
          return (
              <View style={styles.container} >
 
-                 <Text>
-                     Home App
-                 </Text>
 
              </View>
          )

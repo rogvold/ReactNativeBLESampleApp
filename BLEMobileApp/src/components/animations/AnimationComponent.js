@@ -42,10 +42,11 @@ const { Lottie } = DangerZone;
 
  import Icon from 'react-native-vector-icons/FontAwesome'
 
- class HeartAnimationComponent extends React.Component {
+ class AnimationComponent extends React.Component {
 
      static defaultProps = {
-         canRestart: false
+         canRestart: false,
+         source: require('../../assets/lottie/radar.json')
      }
 
      static propTypes = {}
@@ -74,35 +75,19 @@ const { Lottie } = DangerZone;
      };
 
      render() {
-         let {canRestart} = this.props;
+         let {canRestart, source} = this.props;
 
          return (
-             <View style={styles.animationContainer}>
-
-                 <Lottie
-                     ref={animation => {
+             <Lottie
+                 ref={animation => {
                         this.animation = animation;
                  }}
-                     style={{
+                 style={{
                           width: width,
                           height: width
                         }}
-                     source={require('../../assets/lottie/radar.json') }
-                 />
-
-                 {canRestart == false ? null :
-                     <View style={styles.buttonContainer}>
-                         <TouchableOpacity
-                             onPress={this._playAnimation}
-                         >
-                             <Text>
-                                 restart animation
-                             </Text>
-                         </TouchableOpacity>
-                     </View>
-                 }
-
-             </View>
+                 source={source}
+             />
          );
      }
 
@@ -110,12 +95,8 @@ const { Lottie } = DangerZone;
 
 const styles = StyleSheet.create({
     animationContainer: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        // flex: 1,
-    },
-    buttonContainer: {
-        paddingTop: 20,
+        // alignItems: 'center',
+        // justifyContent: 'center',
     },
 });
 
@@ -135,6 +116,6 @@ const styles = StyleSheet.create({
  //    }
  //}
 
- //HeartAnimationComponent = connect(mapStateToProps, mapDispatchToProps)(HeartAnimationComponent)
+ //AnimationComponent = connect(mapStateToProps, mapDispatchToProps)(AnimationComponent)
 
- export default HeartAnimationComponent
+ export default AnimationComponent

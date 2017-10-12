@@ -39,7 +39,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 import { NavigationActions } from 'react-navigation';
 
-import HeartAnimationComponent from '../animations/HeartAnimationComponent'
+import AnimationComponent from '../animations/AnimationComponent'
 
 class InitialApp extends React.Component {
 
@@ -77,12 +77,10 @@ class InitialApp extends React.Component {
         return (
             <View style={styles.container} >
 
-                <View>
-
-                </View>
-
                 {isActive == false ? null :
-                    <HeartAnimationComponent />
+                    <View style={{alignItems: 'center'}} >
+                        <AnimationComponent />
+                    </View>
                 }
 
 

@@ -61,16 +61,18 @@ export function scanBluetoothDevices(){
     }
 }
 
-let connectToDevice_ = () => {
+let connectToDevice_ = (id) => {
     return {
-        type: types.CONNECT_TO_DEVICE
+        type: types.CONNECT_TO_DEVICE,
+        id: id
     }
 }
 
-let connectToDeviceFail = (err) => {
+let connectToDeviceFail = (err, id) => {
     return {
         type: types.CONNECT_TO_DEVICE_FAIL,
-        error: err
+        error: err,
+        id: id
     }
 }
 let connectToDeviceSuccess = (id) => {
@@ -82,10 +84,10 @@ let connectToDeviceSuccess = (id) => {
 //thunk
 export function connectToDevice(deviceId){
     return (dispatch, getState) => {
-        dispatch(connectToDevice_());
+        dispatch(connectToDevice_(deviceId));
         return BluetoothAPI.connectToDevice(deviceId).then(
             () => dispatch(connectToDeviceSuccess(deviceId)),
-            err => dispatch(connectToDeviceFail(err))
+            err => dispatch(connectToDeviceFail(err, id))
         )
     }
 }

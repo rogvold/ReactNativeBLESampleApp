@@ -32,7 +32,7 @@
     "react-native-gifted-form": "^0.1.0",
     "react-native-keyboard-spacer": "^0.3.1",
     "react-native-modal-datetime-picker": "^4.11.0",
-    "react-native-pathjs-charts": "https://github.com/rogvold/react-native-pathjs-charts.git",
+    "react-native-pathjs-charts": "^0.0.31",
     "react-native-scrollable-tab-view": "^0.6.7",
     "react-native-svg": "^6.0.0-rc1",
     "react-native-vector-icons": "^4.4.2",

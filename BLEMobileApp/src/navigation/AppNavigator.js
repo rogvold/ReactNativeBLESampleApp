@@ -46,19 +46,24 @@ const stackNav = StackNavigator({
     Initial: {
         screen: InitialApp,
         navigationOptions: ({navigation}) => ({
-            header: null
+            header: null,
+            headerLeft: null
         }),
     },
     Home: {
         screen: tabNav,
         navigationOptions: ({navigation}) => ({
-            title: 'Home',
+            // title: 'Home',
+            header: null,
+            headerLeft: null
         }),
     },
     Settings: {
         screen: tabNav,
         navigationOptions: ({navigation}) => ({
-            title: 'Settings',
+            // title: 'Settings',
+            header: null,
+            headerLeft: null
         }),
     },
 });

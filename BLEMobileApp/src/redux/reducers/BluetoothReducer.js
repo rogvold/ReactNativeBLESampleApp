@@ -6,6 +6,7 @@ import {Map, Stack, Set} from 'immutable'
 
 const initialState = {
     initializing: false,
+    scanning: false,
     error: undefined,
 
     devicesMap: Map(),
@@ -49,21 +50,44 @@ const BluetoothReducer =  (state = initialState, action = {}) => {
         case types.SCAN_BLUETOOTH_DEVICES:
             return {
                 ...state,
-                initializing: true
+                scanning: true
             }
 
         case types.SCAN_BLUETOOTH_DEVICES_SUCCESS:
             return {
                 ...state,
                 devicesMap: state.devicesMap.merge(action.devices.reduce((res, u) => {return res.set(u.id, u)}, Map())),
-                initializing: false
+                scanning: false
             }
 
         case types.SCAN_BLUETOOTH_DEVICES_FAIL:
             return {
                 ...state,
                 error: action.error,
-                initializing: false
+                scanning: false
+            }
+
+        case types.CONNECT_TO_DEVICE:
+            return {
+                ...state,
+                connectingSet: state.connectingSet.add(action.id),
+                connectedSet: state.connectedSet.delete(action.id)
+            }
+
+        case types.CONNECT_TO_DEVICE_SUCCESS:
+            return {
+                ...state,
+                connectingSet: state.connectingSet.delete(action.id),
+                // connectedSet: state.connectedSet.add(action.id)
+                connectedSet: Set().add(action.id)
+            }
+
+        case types.CONNECT_TO_DEVICE_FAIL:
+            return {
+                ...state,
+                connectingSet: state.connectingSet.delete(action.id),
+                connectedSet: state.connectedSet.delete(action.id),
+                error: action.error
             }
 
 

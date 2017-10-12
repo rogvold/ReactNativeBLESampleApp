@@ -3,29 +3,26 @@
  */
 
 const MOCK_BLUETOOTH_INIT_TIMEOUT = 3000;
-const MOCK_BLUETOOTH_SCAN_TIMEOUT = 1500;
-const MOCK_BLUETOOTH_CONNECT_TIMEOUT = 300;
+const MOCK_BLUETOOTH_SCAN_TIMEOUT = 3500;
+// const MOCK_BLUETOOTH_CONNECT_TIMEOUT = 300;
+const MOCK_BLUETOOTH_CONNECT_TIMEOUT = 1500;
 
 const MOCK_DEVICES = [
     {
-        name: 'sensor_id_1',
+        name: 'sensor_1',
         id: 'AA:BB:CC:00'
     },
     {
-        name: 'sensor_id_2',
+        name: 'sensor_2',
         id: 'AA:BB:CC:01'
     },
     {
-        name: 'sensor_id_3',
+        name: 'sensor_3',
         id: 'AA:BB:CC:02'
     },
     {
-        name: 'sensor_id_4',
+        name: 'sensor_4',
         id: 'AA:BB:CC:03'
-    },
-    {
-        name: 'sensor_id_5',
-        id: 'AA:BB:CC:04'
     }
 ]
 

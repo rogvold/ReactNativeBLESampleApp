@@ -70,6 +70,9 @@ export const colors = {
     eveningColor: '#9b59b6',
     morningColor: '#16a085',
 
+    // goodBlue: '#1F6FD6',
+    goodBlue: '#2DAFC7',
+
 }
 
 // Shadow Props

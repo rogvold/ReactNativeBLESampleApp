@@ -33,8 +33,11 @@ import {
 
 import ReactNative from 'react-native';
 const { StatusBarManager } = NativeModules;
+import {Constants} from 'expo';
 
 import Icon from 'react-native-vector-icons/FontAwesome'
+
+import BluetoothDevicesPanel from '../bluetooth/panels/BluetoothDevicesPanel'
 
 class SettingsApp extends React.Component {
 
@@ -65,9 +68,7 @@ class SettingsApp extends React.Component {
         return (
             <View style={styles.container} >
 
-                <Text>
-                    Settings App
-                </Text>
+                <BluetoothDevicesPanel />
 
             </View>
         )
@@ -78,6 +79,7 @@ class SettingsApp extends React.Component {
 var styles = StyleSheet.create({
     container: {
         flex: 1,
+        paddingTop: Constants.statusBarHeight
     },
 
 });

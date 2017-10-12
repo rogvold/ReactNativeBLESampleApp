@@ -3,7 +3,9 @@
  */
 import { combineReducers } from 'redux';
 import NavReducer from './NavReducer'
+import BluetoothReducer from './BluetoothReducer'
 
 export const reducer = combineReducers({
-    nav: NavReducer
+    nav: NavReducer,
+    ble: BluetoothReducer
 });
