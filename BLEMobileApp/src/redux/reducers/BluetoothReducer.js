@@ -12,7 +12,9 @@ const initialState = {
     devicesMap: Map(),
 
     connectingSet: Set(),
-    connectedSet: Set()
+    connectedSet: Set(),
+
+    dataMap: Map()
 
 }
 
@@ -22,6 +24,20 @@ const startLoading = (state, action) => {
 
 const stopLoading = (state, action) => {
     return { ...state, loading: false, error: action.error}
+}
+
+const consumeData = (oldMap, deviceId, rrs) => {
+    let dataArray = oldMap.get(deviceId);
+    let lastTime = (dataArray == undefined || dataArray.length == 0) ? 0 : dataArray[dataArray.length - 1].t;
+    // console.log('consumeData occured: lastTime = ', lastTime);
+    let addData = rrs.map(r => {
+        return {
+            rr: r,
+            t: +new Date()
+        }
+    })
+    if (dataArray == undefined){dataArray = []}
+    return oldMap.set(deviceId, dataArray.concat(addData));
 }
 
 const BluetoothReducer =  (state = initialState, action = {}) => {
@@ -88,6 +104,12 @@ const BluetoothReducer =  (state = initialState, action = {}) => {
                 connectingSet: state.connectingSet.delete(action.id),
                 connectedSet: state.connectedSet.delete(action.id),
                 error: action.error
+            }
+
+        case types.SAVE_RR_DATA:
+            return {
+                ...state,
+                dataMap: consumeData(state.dataMap, action.deviceId, action.rrs)
             }
 
 

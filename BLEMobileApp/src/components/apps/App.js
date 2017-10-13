@@ -38,15 +38,23 @@
 
  import AppNavigator from '../../navigation/AppNavigator'
 
+ import BluetoothDaemonPanel from '../bluetooth/panels/BluetoothDaemonPanel'
+
  class App extends React.Component {
 
      render = () => {
 
          return (
-             <AppNavigator navigation={addNavigationHelpers({
-                dispatch: this.props.dispatch,
-                state: this.props.nav,
-              })} />
+             <View style={{flex: 1}} >
+                 <AppNavigator navigation={addNavigationHelpers({
+                    dispatch: this.props.dispatch,
+                    state: this.props.nav,
+                  })} />
+
+                 <BluetoothDaemonPanel />
+
+             </View>
+
          )
      }
 

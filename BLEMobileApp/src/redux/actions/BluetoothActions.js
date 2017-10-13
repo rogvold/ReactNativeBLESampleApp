@@ -92,3 +92,13 @@ export function connectToDevice(deviceId){
     }
 }
 
+
+export function saveRRData(deviceId, rrs){
+    return (dispatch, getState) => {
+        return dispatch({
+            type: types.SAVE_RR_DATA,
+            rrs: rrs,
+            deviceId: deviceId
+        })
+    }
+}

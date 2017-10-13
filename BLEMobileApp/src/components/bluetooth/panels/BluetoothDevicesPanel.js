@@ -63,7 +63,9 @@ const {width, height} = mvConsts.window;
      }
 
      render = () => {
-         let {devices, initializing, scanning, connectDevice, connecting, scanDevices, isConnecting, isConnected} = this.props;
+         let {devices, initializing, getPoints,
+             scanning, connectDevice, connecting,
+             scanDevices, isConnecting, isConnected} = this.props;
 
          return (
              <View style={styles.container} >
@@ -85,11 +87,13 @@ const {width, height} = mvConsts.window;
                              if (connected == true){
                                  st.push(styles.connectedItem);
                              }
+                             let points = getPoints(dev.id);
+                             let lastPoint = (points.length == 0) ? undefined : points[points.length - 1];
                              return (
                                  <TouchableOpacity
                                      style={st}
                                      key={dev.id} onPress={() => {
-                                   connectDevice(dev.id);
+                                          connectDevice(dev.id);
                                 }} >
 
                                      <View style={styles.deviceImagePlaceholder} >
@@ -98,10 +102,15 @@ const {width, height} = mvConsts.window;
                                              source={require('../../../assets/images/polarH7_2.png')} />
                                      </View>
                                      <View style={styles.deviceInfoPlaceholder} >
-                                         <View style={{flexDirection: 'row'}} >
+                                         <View style={{flexDirection: 'row', alignItems: 'center'}} >
                                              <Text style={(connected == false) ? styles.name : [styles.name, styles.whiteText]} >
                                                  {dev.name}
                                              </Text>
+                                             {lastPoint == undefined ? null :
+                                                 <Text style={{color: 'white', opacity: 0.8, fontSize: 10}} >
+                                                     {lastPoint.rr}
+                                                 </Text>
+                                             }
                                              {connecting == false ? null :
                                                  <ActivityIndicator />
                                              }
@@ -168,7 +177,8 @@ const {width, height} = mvConsts.window;
         height: 80,
         width: width - 40,
         margin: 10,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        position: 'relative'
      },
 
      connectedItem: {
@@ -244,6 +254,15 @@ const {width, height} = mvConsts.window;
      return f;
  }
 
+ let getDeviceData = (state, deviceId) => {
+     let {dataMap} = state.ble;
+     let d = dataMap.get(deviceId);
+     if (d == undefined){
+         return [];
+     }
+     return d;
+ }
+
  const mapStateToProps = (state) => {
     return {
         initializing: state.ble.initializing,
@@ -254,6 +273,9 @@ const {width, height} = mvConsts.window;
             if (a.id < b.id){return -1;}
             return 0;
         }),
+        getPoints: (deviceId) => {
+            return getDeviceData(state, deviceId)
+        },
         isConnecting: (deviceId) => {
             return state.ble.connectingSet.has(deviceId)
         },

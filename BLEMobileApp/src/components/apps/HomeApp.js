@@ -38,6 +38,8 @@
 
  import BluetoothDevicesPanel from '../bluetooth/panels/BluetoothDevicesPanel'
 
+ import RealtimeChart from '../charts/panels/RealtimeChart'
+
  class HomeApp extends React.Component {
 
      static defaultProps = {}
@@ -67,6 +69,14 @@
          return (
              <View style={styles.container} >
 
+                 <View style={{backgroundColor: 'white',
+                               borderRadius: mvConstants.littleRadius,
+                               justifyContent: 'center',
+                               alignItems: 'center'}} >
+
+                     <RealtimeChart />
+
+                 </View>
 
              </View>
          )
@@ -77,6 +87,9 @@
  var styles = StyleSheet.create({
      container: {
          flex: 1,
+         alignItems: 'center',
+         justifyContent: 'center',
+         padding: 20
      },
 
  });
