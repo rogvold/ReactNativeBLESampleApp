@@ -43,7 +43,9 @@
 
  class RealtimeChart extends React.Component {
 
-     static defaultProps = {}
+     static defaultProps = {
+         maxPointsNumber: 20
+     }
 
      static propTypes = {}
 
@@ -63,21 +65,27 @@
      }
 
      render = () => {
-         let {points} = this.props;
-         let chartData = [points];
+         let {points, maxPointsNumber} = this.props;
+         let pts = points.slice(-maxPointsNumber).map(pt => {
+            let hr = (Math.round(60000.0 / pt.rr));
+            return {
+                ...pt,
+                hr: hr
+            }
+         });
+         let chartData = [pts];
          if (points.length == 0){
              return null;
          }
 
          return (
              <View style={{
-                           backgroundColor: 'white',
                            borderRadius: mvConsts.littleRadius,
                            width: +defaultOptions.width + +defaultOptions.margin.left + +defaultOptions.margin.right,
                            height: +defaultOptions.height +defaultOptions.margin.top + +defaultOptions.margin.bottom
              }} >
                  <SmoothLine data={chartData} options={defaultOptions} pallete={pallete}
-                            xKey='t' yKey='rr' />
+                            xKey='t' yKey='hr' />
              </View>
          )
      }
@@ -99,27 +107,29 @@ const pallete = [
     {'r':100,'g':36,'b':199}];
 
 const defaultOptions = {
-    width: width * 0.8,
+    // width: width * 0.8,
+    width: width * 1.0,
     height: height * 0.25,
     color: mvConsts.colors.goodBlue,
     r: 3,
     margin: {
-        top: 15,
-        bottom: 25,
-        left: 32,
-        right: 10
+        // top: 0,
+        top: 20,
+        bottom: 0,
+        left: 0,
+        right: 0
     },
-    animate: {
-        type: 'delayed',
-        duration: 200
-    },
+    // animate: {
+    //     type: 'delayed',
+    //     duration: 200
+    // },
     axisX: {
-        showAxis: true,
-        showLines: true,
-        showLabels: true,
-        showTicks: true,
+        showAxis: false,
+        showLines: false,
+        showLabels: false,
+        showTicks: false,
         zeroAxis: false,
-        orient: 'bottom',
+        // orient: 'bottom',
         labelFunction: ((v) => {
             return moment(v).format('mm:ss')
         }),
@@ -133,9 +143,10 @@ const defaultOptions = {
     },
     axisY: {
         showAxis: false,
-        showLines: true,
-        showLabels: true,
-        showTicks: true,
+        showLines: false,
+        // showLabels: true,
+        showLabels: false,
+        showTicks: false,
         zeroAxis: true,
         orient: 'left',
         label: {

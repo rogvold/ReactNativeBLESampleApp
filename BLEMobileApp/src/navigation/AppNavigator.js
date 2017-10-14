@@ -38,6 +38,7 @@ const tabNav = TabNavigator({
     tabBarOptions: {
         // activeTintColor: '#222',
         activeTintColor: '#222',
+        // tabStyle: {margin: 0, padding: 0, height: 60},
     }
 });
 

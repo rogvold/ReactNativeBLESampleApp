@@ -40,8 +40,8 @@
  class BluetoothDaemonPanel extends React.Component {
 
      static defaultProps = {
-         // interval: 1500
-         interval: 2500
+         interval: 900
+         // interval: 2500
      }
 
      static propTypes = {}

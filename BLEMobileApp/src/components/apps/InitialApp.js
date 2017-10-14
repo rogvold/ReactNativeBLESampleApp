@@ -56,10 +56,10 @@ class InitialApp extends React.Component {
 
     componentDidMount() {
         Expo.ScreenOrientation.allow('PORTRAIT_UP');
-        let {goHome} = this.props;
-        setTimeout(() => {
-            goHome()
-        }, 3000)
+        // let {goHome} = this.props;
+        // setTimeout(() => {
+        //     goHome()
+        // }, 3000)
     }
 
     componentWillReceiveProps(nextProps) {
@@ -77,11 +77,34 @@ class InitialApp extends React.Component {
         return (
             <View style={styles.container} >
 
-                {isActive == false ? null :
+                {((isActive == false) || (true == true)) ? null :
                     <View style={{alignItems: 'center'}} >
                         <AnimationComponent />
                     </View>
                 }
+
+                <View style={{height: height * 0.25, width: height * 0.25 * 576 / 362}} >
+                    <Image
+                        style={{height: height * 0.25, width: height * 0.25 * 576 / 362}}
+                        source={require('../../assets/images/kaa_logo.png')} />
+                </View>
+
+                <View style={{position: 'absolute', bottom: 50,
+                              alignItems: 'center', justifyContent: 'center',
+                              left: 0, right: 0}} >
+                    <TouchableOpacity
+                                        onPress={() => {
+                                            goHome();
+                                        }}
+                                        style={{height: 50, paddingLeft: 40, alignItems: 'center',
+                                                paddingRight: 40, justifyContent: 'center',
+                                                 width: 0.5 * width,
+                                                borderRadius: 25, backgroundColor: mvConstants.colors.kaaColor}} >
+                        <Text style={{textAlign: 'center', color: 'white', fontSize: 20}} >
+                            START
+                        </Text>
+                    </TouchableOpacity>
+                </View>
 
 
             </View>
@@ -93,6 +116,9 @@ class InitialApp extends React.Component {
 var styles = StyleSheet.create({
     container: {
         flex: 1,
+        position: 'relative',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 
 });

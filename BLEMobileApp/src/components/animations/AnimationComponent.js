@@ -3,7 +3,7 @@
  */
 
  import * as mvConstants from '../../constants/mvConsts'
- const {width, height} = mvConstants.window;
+ const {window} = mvConstants;
 
  import React, {PropTypes} from 'react';
  import {connect} from 'react-redux';
@@ -45,8 +45,12 @@ const { Lottie } = DangerZone;
  class AnimationComponent extends React.Component {
 
      static defaultProps = {
+         startTime: undefined,
          canRestart: false,
-         source: require('../../assets/lottie/radar.json')
+         source: require('../../assets/lottie/radar.json'),
+
+         width: window.width,
+         height: window.width
      }
 
      static propTypes = {}
@@ -65,8 +69,11 @@ const { Lottie } = DangerZone;
      }
 
 
-     componentWillReceiveProps() {
-
+     componentWillReceiveProps(nextProps) {
+        let {startTime} = nextProps;
+        if (startTime != this.props.startTime){
+            this._playAnimation();
+        }
      }
 
      _playAnimation = () => {
@@ -75,7 +82,7 @@ const { Lottie } = DangerZone;
      };
 
      render() {
-         let {canRestart, source} = this.props;
+         let {canRestart, source, height, width} = this.props;
 
          return (
              <Lottie
@@ -84,7 +91,7 @@ const { Lottie } = DangerZone;
                  }}
                  style={{
                           width: width,
-                          height: width
+                          height: height
                         }}
                  source={source}
              />

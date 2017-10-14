@@ -41,6 +41,8 @@ const {width, height} = mvConsts.window;
 
  import * as actions from '../../../redux/actions/BluetoothActions'
 
+ import { NavigationActions } from 'react-navigation';
+
  class BluetoothDevicesPanel extends React.Component {
 
      static defaultProps = {}
@@ -65,7 +67,7 @@ const {width, height} = mvConsts.window;
      render = () => {
          let {devices, initializing, getPoints,
              scanning, connectDevice, connecting,
-             scanDevices, isConnecting, isConnected} = this.props;
+             scanDevices, isConnecting, isConnected, goHome} = this.props;
 
          return (
              <View style={styles.container} >
@@ -130,7 +132,7 @@ const {width, height} = mvConsts.window;
 
                  </ScrollView>
 
-                 {scanning == true ? null :
+                 {((scanning == true) || (connecting == true)) ? null :
                      <View style={styles.scanButtonPlaceholder} >
                          <TouchableOpacity style={styles.button} onPress={() => {
                          scanDevices();
@@ -224,7 +226,7 @@ const {width, height} = mvConsts.window;
      },
 
      button: {
-         backgroundColor: mvConsts.colors.goodBlue,
+         backgroundColor: mvConsts.colors.kaaColor,
          height: 50,
          borderRadius: 25,
          alignItems: 'center',
@@ -291,7 +293,18 @@ const {width, height} = mvConsts.window;
             return dispatch(actions.scanBluetoothDevices())
         },
         connectDevice: (deviceId) => {
-            return dispatch(actions.connectToDevice(deviceId))
+            return dispatch(actions.connectToDevice(deviceId)).then(
+                () => {
+                    return dispatch(NavigationActions.navigate({
+                        routeName: 'Home'
+                    }))
+                }
+            )
+        },
+        goHome: () => {
+            return dispatch(NavigationActions.navigate({
+                routeName: 'Home'
+            }))
         }
     }
  }
