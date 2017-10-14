@@ -95,7 +95,8 @@ const BluetoothReducer =  (state = initialState, action = {}) => {
                 ...state,
                 connectingSet: state.connectingSet.delete(action.id),
                 // connectedSet: state.connectedSet.add(action.id)
-                connectedSet: Set().add(action.id)
+                connectedSet: Set().add(action.id),
+                dataMap: state.dataMap.set(action.id, [])
             }
 
         case types.CONNECT_TO_DEVICE_FAIL:

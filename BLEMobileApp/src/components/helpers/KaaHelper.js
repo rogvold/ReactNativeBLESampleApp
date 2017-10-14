@@ -39,6 +39,13 @@ const KaaHelper = {
             return undefined;
         }
         return points[points.length - 1];
+    },
+
+    getDeviceAvatarSourceByType(deviceType){
+        if (deviceType == 'watches'){
+            return require('../../assets/images/mio_al.png')
+        }
+        return require('../../assets/images/polarH7_2.png')
     }
 
 }

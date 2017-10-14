@@ -1,8 +1,8 @@
 /**
  * Created by sabir on 10.10.17.
  */
- import * as mvConstants from '../../constants/mvConsts'
- const {width, height} = mvConstants.window;
+ import * as mvConsts from '../../constants/mvConsts'
+ const {width, height} = mvConsts.window;
 
  import React, {PropTypes} from 'react';
  import {connect} from 'react-redux';
@@ -73,6 +73,33 @@
 
      }
 
+     renderConnectedDevice(){
+         let {device, lastPoint} = this.props;
+         if (device == undefined){
+             return null;
+         }
+         return (
+             <View
+                 style={styles.device}>
+
+                 <View style={styles.deviceInfoPlaceholder} >
+                     <View >
+                         <Text style={styles.name} >
+                             {device.name}
+                         </Text>
+                     </View>
+
+                     <View>
+                         <Text style={styles.deviceId} >
+                             {device.id}
+                         </Text>
+                     </View>
+                 </View>
+
+             </View>
+         )
+     }
+
      render = () => {
          let { nav, isActive, routeName, lastPoint, device, goToSettings, scan} = this.props;
          // console.log('HomeApp: render: isActive = ', isActive);
@@ -82,14 +109,12 @@
              <View style={styles.container} >
 
                  <LinearGradient
-                     colors={['#FFFFFF', '#FFFFFA']}
+                     colors={['#FFFFFF', '#FFFFFF']}
                      style={{position: 'relative', flex: 1, width: width,
                              justifyContent: 'center', alignItems: 'center' }}>
 
                      {device != null ?
-                         <View>
-
-                         </View> :
+                         this.renderConnectedDevice() :
                          <View style={{alignItems: 'center', justifyContent: 'center', paddingTop: 50, }} >
                              <View style={{
                                  width: width * 0.75,
@@ -120,13 +145,29 @@
 
                      {lastPoint == undefined ? null :
                          <View style={{alignItems: 'center', justifyContent: 'center',
-                                        width: width * 0.5, height: width * 0.5
+                                        width: width * 0.6, height: width * 0.4, position: 'relative'
                          }} >
                              <AnimationComponent
-                                 width={0.5 * width}
-                                 height={0.5 * width}
+                                 width={0.6 * width}
+                                 height={0.4 * width}
                                  startTime={lastPoint.t}
                                  source={require('../../assets/lottie/heart_like_.json')} />
+
+                             <View style={{position: 'absolute', top: 0,
+                                        zIndex: 1000,
+                                        bottom: 0, left: 0, right: 0,
+                                        paddingBottom: 0.05 * width,
+                                        alignItems: 'center', justifyContent: 'center'}} >
+                                 {lastPoint == undefined ? null :
+                                     <Text style={{textAlign: 'center',
+                                            backgroundColor: 'white',
+                                            fontSize: 20,
+                                            color: mvConsts.colors.heartColor, fontWeight: 'bold'}} >
+                                         {Math.round(60000.0 / lastPoint.rr)}
+                                     </Text>
+                                 }
+                             </View>
+
                          </View>
                      }
 
@@ -148,7 +189,48 @@
          flex: 1,
          alignItems: 'center',
          justifyContent: 'center',
+         position: 'relative'
      },
+
+     device: {
+         alignItems: 'center',
+         justifyContent: 'center',
+         borderRadius: mvConsts.bigRadius,
+         height: 80,
+         width: width,
+         flexDirection: 'row',
+         // position: 'relative',
+         position: 'absolute',
+         top: 50,
+         left: 0,
+         right: 0,
+         backgroundColor: 'white'
+     },
+
+     connectedItem: {
+         backgroundColor: mvConsts.colors.kaaColor
+     },
+
+     deviceInfoPlaceholder: {
+         alignItems: 'center',
+         justifyContent: 'center',
+     },
+
+     name: {
+         fontWeight: 'bold',
+         fontSize: 24,
+         marginRight: 10
+     },
+
+     textWhite: {
+         color: 'white'
+     },
+
+     deviceId: {
+         fontSize: 18,
+         opacity: 0.6
+     },
+
  });
 
  let getConnectedDevice = (state) => {

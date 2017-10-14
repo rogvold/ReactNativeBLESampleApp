@@ -9,20 +9,24 @@ const MOCK_BLUETOOTH_CONNECT_TIMEOUT = 1500;
 
 const MOCK_DEVICES = [
     {
-        name: 'sensor_1',
-        id: 'AA:BB:CC:00'
+        name: 'Polar H7 ',
+        id: '00:22:D0:33:1E:0F',
+        type: 'strap'
     },
     {
-        name: 'sensor_2',
-        id: 'AA:BB:CC:01'
+        name: 'Polar H7 ',
+        id: '00:22:A0:33:27:02',
+        type: 'strap'
     },
     {
-        name: 'sensor_3',
-        id: 'AA:BB:CC:02'
+        name: 'Mio Global',
+        id: '00:22:A1:BA:37:05',
+        type: 'watches'
     },
     {
-        name: 'sensor_4',
-        id: 'AA:BB:CC:03'
+        name: 'Polar H7',
+        id: '00:22:D3:A1:65:12',
+        type: 'strap'
     }
 ]
 

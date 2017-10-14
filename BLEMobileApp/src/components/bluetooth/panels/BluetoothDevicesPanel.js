@@ -43,6 +43,12 @@ const {width, height} = mvConsts.window;
 
  import { NavigationActions } from 'react-navigation';
 
+ import KaaButton from '../../buttons/KaaButton'
+
+ import KaaHelper from '../../helpers/KaaHelper'
+
+// getDeviceAvatarSourceByType
+
  class BluetoothDevicesPanel extends React.Component {
 
      static defaultProps = {}
@@ -101,7 +107,7 @@ const {width, height} = mvConsts.window;
                                      <View style={styles.deviceImagePlaceholder} >
                                          <Image
                                              style={styles.deviceImage}
-                                             source={require('../../../assets/images/polarH7_2.png')} />
+                                             source={KaaHelper.getDeviceAvatarSourceByType(dev.type)} />
                                      </View>
                                      <View style={styles.deviceInfoPlaceholder} >
                                          <View style={{flexDirection: 'row', alignItems: 'center'}} >
@@ -134,13 +140,11 @@ const {width, height} = mvConsts.window;
 
                  {((scanning == true) || (connecting == true)) ? null :
                      <View style={styles.scanButtonPlaceholder} >
-                         <TouchableOpacity style={styles.button} onPress={() => {
-                         scanDevices();
-                     }} >
-                             <Text style={styles.buttonText} >
-                                 Scan
-                             </Text>
-                         </TouchableOpacity>
+                         <KaaButton
+                             text={'SCAN'}
+                             onPress={() => {
+                                scanDevices();
+                         }} />
                      </View>
                  }
 
@@ -185,7 +189,8 @@ const {width, height} = mvConsts.window;
 
      connectedItem: {
         // backgroundColor: mvConsts.colors.lightGreenBackground
-        backgroundColor: mvConsts.colors.goodBlue
+        // backgroundColor: mvConsts.colors.goodBlue
+        backgroundColor: mvConsts.colors.kaaColor
      },
 
      deviceImagePlaceholder: {

@@ -73,6 +73,7 @@ export const colors = {
     // goodBlue: '#1F6FD6',
     goodBlue: '#2DAFC7',
     kaaColor: '#F5AC4D',
+    heartColor: '#F65456',
 
 }
 

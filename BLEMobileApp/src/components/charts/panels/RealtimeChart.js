@@ -73,10 +73,11 @@
                 hr: hr
             }
          });
-         let chartData = [pts];
          if (points.length == 0){
              return null;
          }
+         pts = [{...pts[0], hr: 0}].concat(pts)
+         let chartData = [pts];
 
          return (
              <View style={{
@@ -101,7 +102,8 @@
 
 
 const pallete = [
-    {'r':45,'g':175,'b':199},
+    // {'r':45,'g':175,'b':199},
+    {'r':247,'g':84,'b':95},
     {'r':24,'g':175,'b':35},
     {'r':190,'g':31,'b':69},
     {'r':100,'g':36,'b':199}];
@@ -110,7 +112,8 @@ const defaultOptions = {
     // width: width * 0.8,
     width: width * 1.0,
     height: height * 0.25,
-    color: mvConsts.colors.goodBlue,
+    // color: mvConsts.colors.goodBlue,
+    color: mvConsts.colors.kaaColor,
     r: 3,
     margin: {
         // top: 0,
