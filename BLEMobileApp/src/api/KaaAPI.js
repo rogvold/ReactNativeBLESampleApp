@@ -78,8 +78,11 @@ const KaaAPI = {
                 }
             }).then((response) => {
                 console.log('publishToKaa: published!');
-                console.log('resolving with response = ', response);
+                // console.log('resolving with response = ', response);
                 resolve(response);
+            }).catch((err) => {
+                console.log('!!!!    ERROR while uploading to KAA!!! err = ', err);
+                reject(err)
             })
         })
     },
@@ -130,7 +133,7 @@ const KaaAPI = {
             "boundary": "end",
             "sensorID": sensorId
         }]
-        this.publishToKaa(topic, payload);
+        return this.publishToKaa(topic, payload);
     },
 
     //format: [{rr: 123, t: 12121212}, {rr: 123, t: 11212212}]
@@ -151,6 +154,7 @@ const KaaAPI = {
         // sessionStartTimestamp = now - 3 * 1000;
         // if (userId == undefined){userId = 'sabirUserId'}
         //____
+        console.log('savePoints: userId, sessionStartTimestamp, points', userId, sessionStartTimestamp, points)
 
         let topic = `kp1/hrv_patients_v1/dcx/${userId}/json`;
         let payload = points.map((p) => {return {

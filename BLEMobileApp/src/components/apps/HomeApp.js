@@ -44,13 +44,15 @@
 
   import AnimationComponent from '../animations/AnimationComponent'
 
- import KaaHelper from '../helpers/KaaHelper'
+ import KaaHelper from '../../helpers/KaaHelper'
 
  import KaaButton from '../buttons/KaaButton'
 
  import {NavigationActions} from 'react-navigation'
 
  import * as actions from '../../redux/actions/BluetoothActions'
+
+ import * as recActions from '../../redux/actions/RecordActions'
 
  class HomeApp extends React.Component {
 
@@ -74,7 +76,7 @@
      }
 
      renderConnectedDevice(){
-         let {device, lastPoint} = this.props;
+         let {device, lastPoint, disconnect} = this.props;
          if (device == undefined){
              return null;
          }
@@ -94,6 +96,15 @@
                              {device.id}
                          </Text>
                      </View>
+
+                     <TouchableOpacity onPress={() => {
+                         disconnect(device.id)
+                     }} >
+                         <Text style={styles.stopPlaceholder} >
+                             disconnect
+                         </Text>
+                     </TouchableOpacity>
+
                  </View>
 
              </View>
@@ -231,6 +242,11 @@
          opacity: 0.6
      },
 
+     stopPlaceholder: {
+         fontSize: 14,
+         opacity: 0.4
+     },
+
  });
 
  let getConnectedDevice = (state) => {
@@ -261,6 +277,13 @@
         },
         scan: () => {
             return dispatch(actions.scanBluetoothDevices())
+        },
+        disconnect: (deviceId) => {
+            return dispatch(recActions.stopSession()).then(
+                () => {
+                    dispatch(actions.disconnectDevice(deviceId))
+                }
+            )
         }
 
     }

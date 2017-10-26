@@ -5,6 +5,7 @@ import * as types from '../ActionTypes'
 import {Map, Stack, Set} from 'immutable'
 
 import KaaAPI from '../../api/KaaAPI'
+import KaaHelper from '../../helpers/KaaHelper'
 
 let uploadPoints_ = () => {
     return {
@@ -18,9 +19,11 @@ let uploadPointsFail = (err) => {
         error: err
     }
 }
-let uploadPointsSuccess = () => {
+let uploadPointsSuccess = (points) => {
+    console.log('uploadPointsSuccess: points = ', points);
     return {
         type: types.UPLOAD_POINTS_TO_SERVER_SUCCESS,
+        points: points
     }
 }
 //thunk
@@ -28,9 +31,12 @@ export function uploadPoints(){
     return (dispatch, getState) => {
         dispatch(uploadPoints_());
         let {sessionTimestamp} = getState().record;
-        let points = KaaAPI.getNotUploadedPoints(getState());
-        console.log('uploadPoints: points = ', points);
-        return KaaAPI.savePoints('sabir', sessionTimestamp, points).then(
+        let points = KaaHelper.getNotUploadedPoints(getState());
+        let userId = getState().users.currentUserId;
+        if (userId == undefined){
+            userId = 'sabir'
+        }
+        return KaaAPI.savePoints(userId, sessionTimestamp, points).then(
             () => dispatch(uploadPointsSuccess(points)),
             err => dispatch(uploadPointsFail(err))
         );
@@ -65,7 +71,11 @@ export function startSession(){
         console.log('startSession occured');
         let now = +new Date();
         let deviceId = getState().ble.connectedSet.toArray()[0];
-        return KaaAPI.startSession('sabir', deviceId).then(
+        let userId = getState().users.currentUserId;
+        if (userId == undefined){
+            userId = 'sabir'
+        }
+        return KaaAPI.startSession(userId, deviceId).then(
             () => dispatch(startSessionSuccess(now)),
             err => dispatch(startSessionFail(err))
         );
@@ -95,7 +105,11 @@ export function stopSession(){
         dispatch(stopSession_());
         let now = +new Date();
         let deviceId = getState().ble.connectedSet.toArray()[0];
-        return KaaAPI.stopSession('sabir', deviceId).then(
+        let userId = getState().users.currentUserId;
+        if (userId == undefined){
+            userId = 'sabir'
+        }
+        return KaaAPI.stopSession(userId, deviceId).then(
             () => dispatch(stopSessionSuccess()),
             err => dispatch(stopSessionFail(err))
         );

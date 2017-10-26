@@ -42,6 +42,8 @@
      static defaultProps = {
          interval: 900
          // interval: 2500
+         // interval: 4500
+         // interval: 2500
      }
 
      static propTypes = {}

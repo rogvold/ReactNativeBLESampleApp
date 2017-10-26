@@ -6,6 +6,7 @@ const MOCK_BLUETOOTH_INIT_TIMEOUT = 3000;
 const MOCK_BLUETOOTH_SCAN_TIMEOUT = 3500;
 // const MOCK_BLUETOOTH_CONNECT_TIMEOUT = 300;
 const MOCK_BLUETOOTH_CONNECT_TIMEOUT = 1500;
+const MOCK_BLUETOOTH_DISCONNECT_TIMEOUT = 500;
 
 const MOCK_DEVICES = [
     {
@@ -53,6 +54,14 @@ const BluetoothAPI = {
             setTimeout(() => {
                 resolve(MOCK_DEVICES.filter(d => (d.id == deviceId))[0])
             }, MOCK_BLUETOOTH_CONNECT_TIMEOUT)
+        })
+    },
+
+    disconnectDevice(deviceId){
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve()
+            }, MOCK_BLUETOOTH_DISCONNECT_TIMEOUT)
         })
     }
 

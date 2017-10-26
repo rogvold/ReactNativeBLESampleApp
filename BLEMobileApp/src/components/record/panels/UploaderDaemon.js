@@ -35,14 +35,14 @@
 
  import Icon from 'react-native-vector-icons/FontAwesome'
 
- import KaaHelper from '../../helpers/KaaHelper'
+ import KaaHelper from '../../../helpers/KaaHelper'
 
 import * as actions from '../../../redux/actions/RecordActions'
 
  class UploaderDaemon extends React.Component {
 
      static defaultProps = {
-         interval: 3 * 1000
+         interval: 2 * 1000
      }
 
      static propTypes = {}
@@ -83,8 +83,14 @@ import * as actions from '../../../redux/actions/RecordActions'
      }
 
      onTick(){
-         let {sessionTimestamp, points, uploadData} = this.props;
+         let {sessionTimestamp, points, uploadData, recorderLoading, currentUserId} = this.props;
+         console.log('onTick occured: sessionTimestamp = ', sessionTimestamp);
+         // console.log('onTick occured: points = ', points);
+         console.log('onTick occured: points.length, recorderLoading = ', points.length, recorderLoading);
          if (sessionTimestamp == undefined || points == undefined || points.length == 0){
+             return;
+         }
+         if (recorderLoading == true || currentUserId == true){
              return;
          }
          uploadData(points);
@@ -114,8 +120,10 @@ import * as actions from '../../../redux/actions/RecordActions'
 
  const mapStateToProps = (state) => {
     return {
+        currentUserId: state.users.currentUserId,
         sessionTimestamp: state.record.sessionTimestamp,
-        points: KaaHelper.getNotUploadedPoints(state)
+        points: KaaHelper.getNotUploadedPoints(state),
+        recorderLoading: state.record.loading
     }
  }
 

@@ -12,6 +12,7 @@ import LoginApp from '../components/apps/LoginApp'
 import HomeApp from '../components/apps/HomeApp'
 import InitialApp from '../components/apps/InitialApp'
 import SettingsApp from '../components/apps/SettingsApp'
+import ProfileApp from '../components/apps/ProfileApp'
 
 const tabNav = TabNavigator({
     Home: {
@@ -29,6 +30,15 @@ const tabNav = TabNavigator({
             tabBarLabel:"Settings",
             tabBarIcon: ({ tintColor }) => (
                 <Icon name={"gear"} size={30} color={tintColor} />
+            )
+        }
+    },
+    Profile: {
+        screen: ProfileApp,
+        navigationOptions: {
+            tabBarLabel:"Profile",
+            tabBarIcon: ({ tintColor }) => (
+                <Icon name={"user"} size={30} color={tintColor} />
             )
         }
     }

@@ -92,6 +92,38 @@ export function connectToDevice(deviceId){
     }
 }
 
+//disconnect
+let disconnectDevice_ = () => {
+    return {
+        type: types.DISCONNECT_DEVICE
+    }
+}
+
+let disconnectDeviceFail = (err) => {
+    return {
+        type: types.DISCONNECT_DEVICE_FAIL,
+        error: err
+    }
+}
+let disconnectDeviceSuccess = (id) => {
+    return {
+        type: types.DISCONNECT_DEVICE_SUCCESS,
+        id: id
+    }
+}
+//thunk
+export function disconnectDevice(deviceId){
+    return (dispatch, getState) => {
+        dispatch(disconnectDevice_());
+        return BluetoothAPI.connectToDevice(deviceId).then(
+            () => dispatch(disconnectDeviceSuccess(deviceId)),
+            err => dispatch(disconnectDeviceFail(err))
+        )
+    }
+}
+
+
+
 
 export function saveRRData(deviceId, rrs){
     return (dispatch, getState) => {

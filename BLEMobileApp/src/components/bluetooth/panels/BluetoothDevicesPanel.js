@@ -46,7 +46,7 @@ const {width, height} = mvConsts.window;
 
  import KaaButton from '../../buttons/KaaButton'
 
- import KaaHelper from '../../helpers/KaaHelper'
+ import KaaHelper from '../../../helpers/KaaHelper'
 
 // getDeviceAvatarSourceByType
 

@@ -43,20 +43,25 @@ const KaaHelper = {
 
     getDeviceAvatarSourceByType(deviceType){
         if (deviceType == 'watches'){
-            return require('../../assets/images/mio_al.png')
+            return require('../assets/images/mio_al.png')
         }
-        return require('../../assets/images/polarH7_2.png')
+        return require('../assets/images/polarH7_2.png')
     },
 
     getNotUploadedPoints(state){
+        console.log('getNotUploadedPoints occured');
         let {uploadedSet, sessionTimestamp} = state.record;
         let {dataMap} = state.ble;
         if (sessionTimestamp == undefined){
             return [];
         }
-        return dataMap.toArray().filter(p => (+p.t > +sessionTimestamp))
+        let allPoints = dataMap.toArray().reduce((arr, pts) => {return arr.concat(pts)}, []);
+        // console.log('allPoints = ', allPoints);
+        let points = allPoints.filter(p => (+p.t > +sessionTimestamp))
                                 .filter(p => (uploadedSet.has(p.id) == false))
                                 .sort((a, b) => (+a.t - +b.t))
+        // console.log('points = ', points);
+        return points;
     }
 
 }

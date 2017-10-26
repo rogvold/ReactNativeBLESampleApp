@@ -36,6 +36,7 @@ import {Provider} from 'react-redux';
 
 //actions
 import * as initActions from './redux/actions/InitActions.js';
+import * as usersActions from './redux/actions/UsersActions.js';
 
 import {reducer} from './redux/reducers'
 
@@ -48,6 +49,7 @@ import immutableTransform from 'redux-persist-transform-immutable'
 import {AsyncStorage} from 'react-native'
 
 import KaaAPI from './api/KaaAPI'
+import ParseAPI from './api/ParseAPI'
 
 
 import App from './components/apps/App'
@@ -96,6 +98,7 @@ export default function setup() {
 
     }
     moment.locale('ru');
+    ParseAPI.initParse();
     return RootApp;
 }
 
@@ -103,7 +106,9 @@ export default function setup() {
 
 let init = () => {
     return (dispatch, getState) => {
-        dispatch(initActions.loadEverything());
+        dispatch(usersActions.initializeAuthorization()).then(
+            () => dispatch(initActions.loadEverything())
+        )
     }
 }
 

@@ -102,6 +102,12 @@ const BluetoothReducer =  (state = initialState, action = {}) => {
                 dataMap: state.dataMap.set(action.id, [])
             }
 
+        case types.DISCONNECT_DEVICE_SUCCESS:
+            return {
+                ...state,
+                connectedSet: Set()
+            }
+
         case types.CONNECT_TO_DEVICE_FAIL:
             return {
                 ...state,
@@ -109,6 +115,8 @@ const BluetoothReducer =  (state = initialState, action = {}) => {
                 connectedSet: state.connectedSet.delete(action.id),
                 error: action.error
             }
+
+
 
         case types.SAVE_RR_DATA:
             return {
