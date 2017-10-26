@@ -39,6 +39,7 @@
  import AppNavigator from '../../navigation/AppNavigator'
 
  import BluetoothDaemonPanel from '../bluetooth/panels/BluetoothDaemonPanel'
+ import UploaderDaemon from '../record/panels/UploaderDaemon'
 
  class App extends React.Component {
 
@@ -52,6 +53,8 @@
                   })} />
 
                  <BluetoothDaemonPanel />
+
+                 <UploaderDaemon />
 
              </View>
 

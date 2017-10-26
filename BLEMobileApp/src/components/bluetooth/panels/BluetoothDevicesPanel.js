@@ -40,6 +40,7 @@ const {width, height} = mvConsts.window;
  import AnimationComponent from '../../animations/AnimationComponent'
 
  import * as actions from '../../../redux/actions/BluetoothActions'
+ import * as recActions from '../../../redux/actions/RecordActions'
 
  import { NavigationActions } from 'react-navigation';
 
@@ -304,6 +305,8 @@ const {width, height} = mvConsts.window;
                         routeName: 'Home'
                     }))
                 }
+            ).then(
+                () => dispatch(recActions.startSession())
             )
         },
         goHome: () => {

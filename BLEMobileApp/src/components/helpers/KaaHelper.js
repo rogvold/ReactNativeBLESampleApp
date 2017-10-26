@@ -46,6 +46,17 @@ const KaaHelper = {
             return require('../../assets/images/mio_al.png')
         }
         return require('../../assets/images/polarH7_2.png')
+    },
+
+    getNotUploadedPoints(state){
+        let {uploadedSet, sessionTimestamp} = state.record;
+        let {dataMap} = state.ble;
+        if (sessionTimestamp == undefined){
+            return [];
+        }
+        return dataMap.toArray().filter(p => (+p.t > +sessionTimestamp))
+                                .filter(p => (uploadedSet.has(p.id) == false))
+                                .sort((a, b) => (+a.t - +b.t))
     }
 
 }

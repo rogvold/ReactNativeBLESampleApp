@@ -39,6 +39,8 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 import BluetoothDevicesPanel from '../bluetooth/panels/BluetoothDevicesPanel'
 
+import KaaTestPanel from '../kaa/KaaTestPanel'
+
 class SettingsApp extends React.Component {
 
     static defaultProps = {}
@@ -69,6 +71,10 @@ class SettingsApp extends React.Component {
             <View style={styles.container} >
 
                 <BluetoothDevicesPanel />
+
+                {true == true ? null :
+                    <KaaTestPanel />
+                }
 
             </View>
         )

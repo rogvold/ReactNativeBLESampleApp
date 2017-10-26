@@ -4,6 +4,8 @@
 import * as types from '../ActionTypes'
 import {Map, Stack, Set} from 'immutable'
 
+import uuid from 'uuid'
+
 const initialState = {
     initializing: false,
     scanning: false,
@@ -33,7 +35,8 @@ const consumeData = (oldMap, deviceId, rrs) => {
     let addData = rrs.map(r => {
         return {
             rr: r,
-            t: +new Date()
+            t: +new Date(),
+            id: uuid()
         }
     })
     if (dataArray == undefined){dataArray = []}

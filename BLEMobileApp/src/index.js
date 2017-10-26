@@ -47,6 +47,7 @@ import {persistStore, autoRehydrate} from 'redux-persist'
 import immutableTransform from 'redux-persist-transform-immutable'
 import {AsyncStorage} from 'react-native'
 
+import KaaAPI from './api/KaaAPI'
 
 
 import App from './components/apps/App'
@@ -67,6 +68,7 @@ const store = (__DEV__ ? createStore(
             )
         )
 )
+
 
 // const store = (__DEV__ ? createStore(
 //             reducer,

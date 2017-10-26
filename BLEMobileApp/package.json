@@ -19,6 +19,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "axios": "^0.17.0",
     "crypto-js": "^3.1.9-1",
     "debounce": "^1.0.2",
     "expo": "^20.0.0",
@@ -32,6 +33,7 @@
     "react-native-gifted-form": "^0.1.0",
     "react-native-keyboard-spacer": "^0.3.1",
     "react-native-modal-datetime-picker": "^4.11.0",
+    "react-native-paho-mqtt": "^0.1.1",
     "react-native-pathjs-charts": "^0.0.31",
     "react-native-scrollable-tab-view": "^0.6.7",
     "react-native-svg": "^6.0.0-rc1",
