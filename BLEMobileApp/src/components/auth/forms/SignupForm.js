@@ -111,7 +111,7 @@ class SignupForm extends React.Component {
                     underlineColorAndroid={'transparent'}
                     autoCapitalize={'none'}
                     value={password}
-                    placeholder={'Пароль'}
+                    placeholder={'Password'}
                     secureTextEntry={true}
                     keyboardType={'default'}
                     onChangeText={(txt) => {
@@ -128,7 +128,7 @@ class SignupForm extends React.Component {
                     underlineColorAndroid={'transparent'}
                     autoCapitalize={'none'}
                     value={confirmPassword}
-                    placeholder={'Повторите пароль'}
+                    placeholder={'Confirm password'}
                     secureTextEntry={true}
                     keyboardType={'default'}
                     onChangeText={(txt) => {

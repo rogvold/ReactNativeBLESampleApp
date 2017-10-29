@@ -108,7 +108,7 @@ const window = mvConsts.window
                      underlineColorAndroid={'transparent'}
                      autoCapitalize={'none'}
                      value={password}
-                     placeholder={'Пароль'}
+                     placeholder={'Password'}
                      secureTextEntry={true}
                      keyboardType={'default'}
                      onChangeText={(txt) => {

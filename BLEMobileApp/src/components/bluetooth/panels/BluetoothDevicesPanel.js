@@ -305,9 +305,10 @@ const {width, height} = mvConsts.window;
                         routeName: 'Home'
                     }))
                 }
-            ).then(
-                () => dispatch(recActions.startSession())
             )
+                // .then(
+                //     () => dispatch(recActions.startSession())
+                // )
         },
         goHome: () => {
             return dispatch(NavigationActions.navigate({

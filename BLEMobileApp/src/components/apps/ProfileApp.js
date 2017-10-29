@@ -51,6 +51,8 @@ import UserPanel from '../users/panels/UserPanel'
 
 import KeyboardSpacer from "react-native-keyboard-spacer"
 
+import UserSessionsPanels from '../sessions/panels/UserSessionsPanels'
+
 class ProfileApp extends React.Component {
 
     static defaultProps = {}
@@ -103,6 +105,10 @@ class ProfileApp extends React.Component {
                                     logOut();
                                 }} />
                             </View>
+
+                            {isActive == false ? null :
+                                <UserSessionsPanels userId={user.id} />
+                            }
 
                         </View>
                     }

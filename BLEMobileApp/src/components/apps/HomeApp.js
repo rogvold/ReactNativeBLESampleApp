@@ -54,6 +54,8 @@
 
  import * as recActions from '../../redux/actions/RecordActions'
 
+ import StartStopSessionButton from '../sessions/buttons/StartStopSessionButton'
+
  class HomeApp extends React.Component {
 
      static defaultProps = {}
@@ -97,13 +99,17 @@
                          </Text>
                      </View>
 
-                     <TouchableOpacity onPress={() => {
-                         disconnect(device.id)
-                     }} >
-                         <Text style={styles.stopPlaceholder} >
-                             disconnect
-                         </Text>
-                     </TouchableOpacity>
+                     <StartStopSessionButton />
+
+                     {true == true ? null :
+                         <TouchableOpacity onPress={() => {
+                             disconnect(device.id)
+                         }} >
+                             <Text style={styles.stopPlaceholder} >
+                                 disconnect
+                             </Text>
+                         </TouchableOpacity>
+                     }
 
                  </View>
 
@@ -112,7 +118,7 @@
      }
 
      render = () => {
-         let { nav, isActive, routeName, lastPoint, device, goToSettings, scan} = this.props;
+         let { nav, isActive, routeName, lastPoint, device, goToSettings, scan, recordLoading} = this.props;
          // console.log('HomeApp: render: isActive = ', isActive);
          // console.log('HomeApp: render: routeName = ', routeName);
 
@@ -263,6 +269,7 @@
         nav: state.nav,
         routeName: ownProps.navigation.state.routeName,
         isActive: (ownProps.navigation.state.routeName == 'Home'),
+        recordLoading: state.record.loading,
         lastPoint: KaaHelper.getConnectedDeviceLastPoint(state),
         device: KaaHelper.getConnectedDevice(state)
     }

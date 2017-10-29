@@ -6,10 +6,12 @@ import NavReducer from './NavReducer'
 import BluetoothReducer from './BluetoothReducer'
 import RecordReducer from './RecordReducer'
 import UsersReducer from './UsersReducer'
+import SessionsReducer from './SessionsReducer'
 
 export const reducer = combineReducers({
     nav: NavReducer,
     ble: BluetoothReducer,
     users: UsersReducer,
-    record: RecordReducer
+    record: RecordReducer,
+    sessions: SessionsReducer
 });

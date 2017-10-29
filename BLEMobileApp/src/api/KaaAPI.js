@@ -138,24 +138,7 @@ const KaaAPI = {
 
     //format: [{rr: 123, t: 12121212}, {rr: 123, t: 11212212}]
     savePoints(userId, sessionStartTimestamp, points){
-        //todo: remove it
-        // let now = +new Date();
-        // let defaultPoints = [{
-        //     rr: 555,
-        //     t: now - 3 * 1000
-        // }, {
-        //     rr: 666,
-        //     t: now - 2 * 1000
-        // }, {
-        //     rr: 777,
-        //     t: now - 1 * 1000
-        // }]
-        // points = defaultPoints;
-        // sessionStartTimestamp = now - 3 * 1000;
-        // if (userId == undefined){userId = 'sabirUserId'}
-        //____
         console.log('savePoints: userId, sessionStartTimestamp, points', userId, sessionStartTimestamp, points)
-
         let topic = `kp1/hrv_patients_v1/dcx/${userId}/json`;
         let payload = points.map((p) => {return {
             startTimestamp: sessionStartTimestamp,
@@ -163,7 +146,103 @@ const KaaAPI = {
             rr: p.rr
         }});
         return this.publishToKaa(topic, payload);
-    }
+    },
+
+    getAllSessionsByUserId(userId, fromTimestamp, toTimestamp){
+        let url = config.KAA_BASE_ENDPOINT_URL + 'endpoints/tokens/' + userId;
+        let topicUrl = config.KAA_BASE_URL + 'time-series/SessionsTs/data';
+        console.log('KaaAPI: getAllSessionsByUserId: url, topicUrl = ', url, topicUrl);
+        let toDateString = (toTimestamp == undefined) ? (new Date()) : (new Date(toTimestamp))
+        let fromDateString = (fromTimestamp == undefined) ? (new Date(0)) : (new Date(fromTimestamp))
+        return new Promise((resolve, reject) => {
+            axios.get(url, {params: {}}).then((response) => {
+                console.log('got endpoint result: response = ', response);
+                let {endpointId} = response.data;
+                console.log('endpointId = ', endpointId);
+                axios({
+                    url: topicUrl,
+                    method: 'get',
+                    params: {
+                        fromDate: fromDateString,
+                        toDate: toDateString,
+                        endpointId: endpointId
+                    }
+                }).then((resp) => {
+                    console.log('getAllSessionsByUserId: resp = ', resp);
+                    let getNearestEnd = (isoTimestamp) => {
+                        let aT = +new Date(isoTimestamp);
+                        let eSessions = resp.data.filter(sess => (sess.value == 'end')).map(sess => {
+                            return {
+                                ...sess,
+                                t: +new Date(sess.timestamp)
+                            }
+                        }).sort((a, b) => (a.t - b.t));
+                        for (let i in eSessions){
+                            if (+eSessions[i].t > aT){
+                                return eSessions[i].t;
+                            }
+                        }
+                        return undefined;
+                        // return (+new Date())
+                    }
+                    let sessions = resp.data.filter(sess => (sess.value == 'start')).map(sess => {
+                        return {
+                            id: userId + '_' + sess.timestamp,
+                            userId: userId,
+                            sensorId: sess.tags.sensorID,
+                            timestamp: new Date(sess.timestamp),
+                            startTimestamp: +new Date(sess.timestamp),
+                            endTimestamp: getNearestEnd(sess.timestamp)
+                        }
+                    });
+                    console.log('getAllSessionsByUserId: resolving sessions = ', sessions);
+                    resolve(sessions);
+                }).catch(
+                    err => {
+                        console.log('KaaAPI: getAllSessionsByUserId: err = ', err);
+                        return reject(err)
+                    }
+                )
+            })
+        })
+    },
+
+    getUserPoints(userId, fromTimestamp, toTimestamp){
+        let url = config.KAA_BASE_ENDPOINT_URL + 'endpoints/tokens/' + userId;
+        let topicUrl = config.KAA_BASE_URL + 'time-series/RespiratoryRateTs/data';
+        // let offset = 30 * 1000;
+        let offset = 300 * 1000;
+        if (fromTimestamp != undefined) {fromTimestamp = +fromTimestamp - +offset;}
+        if (toTimestamp != undefined) {toTimestamp = +toTimestamp + +offset;}
+
+        let toDateString = (toTimestamp == undefined) ? (new Date()) : (new Date(toTimestamp))
+        let fromDateString = (fromTimestamp == undefined) ? (new Date(0)) : (new Date(fromTimestamp))
+        console.log('getUserPoints: fromDateString, toDateString = ', fromDateString, toDateString);
+        return new Promise((resolve, reject) => {
+            axios.get(url, {params: {}}).then((response) => {
+                console.log(response);
+                let {endpointId} = response.data;
+                axios.get(topicUrl, {
+                    params: {
+                        fromDate: fromDateString,
+                        toDate: toDateString,
+                        endpointId: endpointId
+                    }
+                }).then((resp) => {
+                    console.log('resp = ', resp);
+                    let {data} = resp;
+                    console.log('getUserPoints: data = ', data);
+                    let points = data.map(pt => {
+                        return {
+                            t: +new Date(pt.timestamp),
+                            rr: pt.value
+                        }
+                    });
+                    resolve(points);
+                });
+            }).catch(err => reject(err))
+        })
+    },
 
 
 
