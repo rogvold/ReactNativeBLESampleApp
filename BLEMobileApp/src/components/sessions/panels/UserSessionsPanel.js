@@ -42,7 +42,7 @@
 
  import moment from 'moment'
 
- class UserSessionsPanels extends React.Component {
+ class UserSessionsPanel extends React.Component {
 
      static defaultProps = {}
 
@@ -76,20 +76,26 @@
                      let {startTimestamp, endTimestamp} = sess;
                      return (
                          <TouchableOpacity key={sess.id}
-                                           style={{width: width, padding: 10, marginBottom: height * 0.05}} >
+                                           style={{
+                                                padding: 10,
+                                                width: width - 20,
+                                                marginBottom: height * 0.05, backgroundColor: 'white',
+                                                borderRadius: mvConsts.bigRadius
+                                           }} >
                              <View >
                                  <Text style={{fontWeight: 'bold', fontSize: mvConsts.fontSizeMiddle}} >
-                                     {moment(startTimestamp).format('MMMM, Y')}
+                                     {moment(startTimestamp).format('MMMM, D')}
                                  </Text>
                              </View>
-                             <View style={{marginTop: 10, opacity: 0.6}} >
+                             <View style={{marginTop: 10, opacity: 0.6, flexDirection: 'row'}} >
                                  <Text>
                                      {moment(startTimestamp).format('HH:mm:ss')}
                                  </Text>
-                                 <Text>{' - '}</Text>
-                                 <Text>
-                                     {moment(endTimestamp).format('HH:mm:ss')}
-                                 </Text>
+                                 {endTimestamp == undefined ? null :
+                                     <Text>
+                                         {' - ' + moment(endTimestamp).format('HH:mm:ss')}
+                                     </Text>
+                                 }
                              </View>
                          </TouchableOpacity>
                      )
@@ -104,6 +110,7 @@
  const styles = StyleSheet.create({
      container: {
          flex: 1,
+         padding: 10
      },
 
  });
@@ -114,7 +121,7 @@ const mapStateToProps = (state, ownProps) => {
         loading: state.sessions.loading,
         sessions: state.sessions.sessionsMap.toArray()
                         .filter(s => (s.userId == ownProps.userId))
-                        .sort((a, b) => (a.startTimestamp - b.startTimestamp))
+                        .sort((a, b) => (b.startTimestamp - a.startTimestamp))
     }
 }
 
@@ -128,4 +135,4 @@ const mapDispatchToProps = (dispatch) => {
 
 UserSessionsPanel = connect(mapStateToProps, mapDispatchToProps)(UserSessionsPanel)
 
- export default UserSessionsPanels
+ export default UserSessionsPanel

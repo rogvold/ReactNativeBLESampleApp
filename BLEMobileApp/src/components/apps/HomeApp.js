@@ -56,6 +56,8 @@
 
  import StartStopSessionButton from '../sessions/buttons/StartStopSessionButton'
 
+ import moment from 'moment'
+
  class HomeApp extends React.Component {
 
      static defaultProps = {}
@@ -78,10 +80,14 @@
      }
 
      renderConnectedDevice(){
-         let {device, lastPoint, disconnect} = this.props;
+         let { nav, isActive, routeName, lastPoint, device, goToSettings, disconnect,
+             scan, recordLoading, sessionTimestamp} = this.props;
          if (device == undefined){
              return null;
          }
+         let fromStartMs = (+new Date() - sessionTimestamp);
+         let goodDur = KaaHelper.getPrettyDuration(fromStartMs);
+
          return (
              <View
                  style={styles.device}>
@@ -101,6 +107,14 @@
 
                      <StartStopSessionButton />
 
+                     {sessionTimestamp == undefined ? null :
+                         <View style={{height: 30}}>
+                             <Text style={{textAlign: 'center'}} >
+                                 {goodDur}
+                             </Text>
+                         </View>
+                     }
+
                      {true == true ? null :
                          <TouchableOpacity onPress={() => {
                              disconnect(device.id)
@@ -118,9 +132,11 @@
      }
 
      render = () => {
-         let { nav, isActive, routeName, lastPoint, device, goToSettings, scan, recordLoading} = this.props;
-         // console.log('HomeApp: render: isActive = ', isActive);
-         // console.log('HomeApp: render: routeName = ', routeName);
+         let { nav, isActive, routeName, lastPoint, device, goToSettings,
+               scan, recordLoading, sessionTimestamp} = this.props;
+         let fromStartMs = (+new Date() - sessionTimestamp);
+         let goodDur = KaaHelper.getPrettyDuration(fromStartMs);
+
 
          return (
              <View style={styles.container} >
@@ -271,7 +287,9 @@
         isActive: (ownProps.navigation.state.routeName == 'Home'),
         recordLoading: state.record.loading,
         lastPoint: KaaHelper.getConnectedDeviceLastPoint(state),
-        device: KaaHelper.getConnectedDevice(state)
+        device: KaaHelper.getConnectedDevice(state),
+
+        sessionTimestamp: state.record.sessionTimestamp
     }
  }
 

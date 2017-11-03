@@ -51,7 +51,7 @@ import UserPanel from '../users/panels/UserPanel'
 
 import KeyboardSpacer from "react-native-keyboard-spacer"
 
-import UserSessionsPanels from '../sessions/panels/UserSessionsPanels'
+import UserSessionsPanel from '../sessions/panels/UserSessionsPanel'
 
 class ProfileApp extends React.Component {
 
@@ -94,20 +94,22 @@ class ProfileApp extends React.Component {
                     }
 
                     {user == undefined ? null :
-                        <View>
+                        <View style={{marginBottom: 10}} >
 
-                            <View style={{justifyContent: 'center', alignItems: 'center', paddingTop: height / 4.0}} >
+                            <View style={{justifyContent: 'center', alignItems: 'center', paddingTop: height / 8.0}} >
                                 <UserPanel />
                             </View>
 
-                            <View style={{justifyContent: 'center', alignItems: 'center', paddingTop: height / 8.0}} >
+                            <View style={{justifyContent: 'center', alignItems: 'center', paddingTop: height / 16.0}} >
                                 <KaaButton text={'LOGOUT'} onPress={() => {
                                     logOut();
                                 }} />
                             </View>
 
                             {isActive == false ? null :
-                                <UserSessionsPanels userId={user.id} />
+                                <View style={{marginTop: 20}} >
+                                    <UserSessionsPanel userId={user.id} />
+                                </View>
                             }
 
                         </View>

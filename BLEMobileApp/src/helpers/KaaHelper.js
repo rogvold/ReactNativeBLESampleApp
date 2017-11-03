@@ -62,6 +62,20 @@ const KaaHelper = {
                                 .sort((a, b) => (+a.t - +b.t))
         // console.log('points = ', points);
         return points;
+    },
+
+    getPrettyDuration(durMilliseconds){
+        let durSec = Math.floor(durMilliseconds / 1000.0);
+        let minutes = Math.floor(durSec / 60);
+        let seconds = durSec % 60;
+        if (minutes < 10){
+            minutes = '0' + minutes;
+        }
+        if (seconds < 10){
+            seconds = '0' + seconds;
+        }
+        let s = minutes + ':' + seconds;
+        return s;
     }
 
 }
