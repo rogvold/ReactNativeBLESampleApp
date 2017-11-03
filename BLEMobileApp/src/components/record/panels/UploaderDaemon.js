@@ -87,7 +87,8 @@ import * as actions from '../../../redux/actions/RecordActions'
          console.log('onTick occured: sessionTimestamp = ', sessionTimestamp);
          // console.log('onTick occured: points = ', points);
          console.log('onTick occured: points.length, recorderLoading = ', points.length, recorderLoading);
-         if (sessionTimestamp == undefined || points == undefined || points.length == 0){
+         // if (sessionTimestamp == undefined || points == undefined || points.length == 0){
+         if (points == undefined || points.length == 0){
              return;
          }
          if (recorderLoading == true || currentUserId == true){

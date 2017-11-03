@@ -52,12 +52,15 @@ const KaaHelper = {
         console.log('getNotUploadedPoints occured');
         let {uploadedSet, sessionTimestamp} = state.record;
         let {dataMap} = state.ble;
-        if (sessionTimestamp == undefined){
-            return [];
-        }
+
+        // if (sessionTimestamp == undefined){
+        //     return [];
+        // }
+
         let allPoints = dataMap.toArray().reduce((arr, pts) => {return arr.concat(pts)}, []);
         // console.log('allPoints = ', allPoints);
-        let points = allPoints.filter(p => (+p.t > +sessionTimestamp))
+        let points = allPoints
+                        // .filter(p => (+p.t > +sessionTimestamp))
                                 .filter(p => (uploadedSet.has(p.id) == false))
                                 .sort((a, b) => (+a.t - +b.t))
         // console.log('points = ', points);
