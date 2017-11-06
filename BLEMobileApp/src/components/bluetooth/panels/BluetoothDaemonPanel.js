@@ -82,7 +82,7 @@
 
      onTick = () => {
          let {saveData, device, fakeEnabled} = this.props;
-         if (device == undefined || fakeEnabled == fakeEnabled){
+         if (device == undefined || fakeEnabled == false){
              return;
          }
          let randomRR = Math.floor(Math.random() * 300 + 500);

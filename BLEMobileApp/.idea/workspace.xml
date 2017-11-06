@@ -46,8 +46,8 @@
       <file leaf-file-name="BluetoothReducer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/redux/reducers/BluetoothReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+            <state relative-caret-position="209">
+              <caret line="134" column="33" lean-forward="true" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -95,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FakeSwitcherPanel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FakeSwitcherPanel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/fake/FakeSwitcherPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+            <state relative-caret-position="392">
+              <caret line="111" column="44" lean-forward="false" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
               <folding>
                 <element signature="e#44#83#0" expanded="true" />
                 <element signature="e#632#688#0" expanded="true" />
@@ -120,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BluetoothDaemonPanel.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BluetoothDaemonPanel.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/bluetooth/panels/BluetoothDaemonPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="84" column="62" lean-forward="false" selection-start-line="84" selection-start-column="62" selection-end-line="84" selection-end-column="62" />
+            <state relative-caret-position="344">
+              <caret line="91" column="34" lean-forward="true" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -141,8 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>boun</find>
-      <find>getUserPoints</find>
       <find>.connectedSet</find>
       <find>disconnect</find>
       <find>startSession(</find>
@@ -171,6 +169,8 @@
       <find>FakeSwitcherPanel</find>
       <find>marginTop</find>
       <find>TURN_OFF_FAKE</find>
+      <find>ble.fakeEnabled</find>
+      <find>.toLowerCase</find>
     </findStrings>
     <replaceStrings>
       <replace>InitialApp</replace>
@@ -228,8 +228,8 @@
         <option value="$PROJECT_DIR$/src/components/apps/HomeApp.js" />
         <option value="$PROJECT_DIR$/src/components/apps/SettingsApp.js" />
         <option value="$PROJECT_DIR$/src/components/apps/ProfileApp.js" />
-        <option value="$PROJECT_DIR$/src/components/bluetooth/panels/BluetoothDaemonPanel.js" />
         <option value="$PROJECT_DIR$/src/components/fake/FakeSwitcherPanel.js" />
+        <option value="$PROJECT_DIR$/src/components/bluetooth/panels/BluetoothDaemonPanel.js" />
       </list>
     </option>
   </component>
@@ -741,12 +741,12 @@
       <workItem from="1509307786125" duration="4106000" />
       <workItem from="1509695181307" duration="10612000" />
       <workItem from="1509716357574" duration="5730000" />
-      <workItem from="1509941947907" duration="5203000" />
+      <workItem from="1509941947907" duration="5862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124974000" />
+    <option name="totallyTimeSpent" value="125633000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1170,6 +1170,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/fake/FakeSwitcherPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="111" column="44" lean-forward="false" selection-start-line="111" selection-start-column="44" selection-end-line="111" selection-end-column="44" />
+          <folding>
+            <element signature="e#44#83#0" expanded="true" />
+            <element signature="e#632#688#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/actions/BluetoothActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1180,28 +1191,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/reducers/BluetoothReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+        <state relative-caret-position="209">
+          <caret line="134" column="33" lean-forward="true" selection-start-line="134" selection-start-column="33" selection-end-line="134" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/bluetooth/panels/BluetoothDaemonPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="84" column="62" lean-forward="false" selection-start-line="84" selection-start-column="62" selection-end-line="84" selection-end-column="62" />
+        <state relative-caret-position="344">
+          <caret line="91" column="34" lean-forward="true" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/fake/FakeSwitcherPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
-          <folding>
-            <element signature="e#44#83#0" expanded="true" />
-            <element signature="e#632#688#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
