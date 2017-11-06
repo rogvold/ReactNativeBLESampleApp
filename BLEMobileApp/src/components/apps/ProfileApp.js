@@ -53,6 +53,8 @@ import KeyboardSpacer from "react-native-keyboard-spacer"
 
 import UserSessionsPanel from '../sessions/panels/UserSessionsPanel'
 
+import FakeSwitcherPanel from '../fake/FakeSwitcherPanel'
+
 class ProfileApp extends React.Component {
 
     static defaultProps = {}
@@ -109,8 +111,14 @@ class ProfileApp extends React.Component {
                             {isActive == false ? null :
                                 <View style={{marginTop: 20}} >
                                     <UserSessionsPanel userId={user.id} />
+
+                                    <View style={{marginTop: 20}} >
+                                        <FakeSwitcherPanel />
+                                    </View>
+
                                 </View>
                             }
+
 
                         </View>
                     }

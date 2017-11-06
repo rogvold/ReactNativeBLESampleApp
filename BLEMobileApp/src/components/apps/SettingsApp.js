@@ -41,6 +41,8 @@ import BluetoothDevicesPanel from '../bluetooth/panels/BluetoothDevicesPanel'
 
 import KaaTestPanel from '../kaa/KaaTestPanel'
 
+import FakeSwitcherPanel from '../fake/FakeSwitcherPanel'
+
 class SettingsApp extends React.Component {
 
     static defaultProps = {}
@@ -75,6 +77,7 @@ class SettingsApp extends React.Component {
                 {true == true ? null :
                     <KaaTestPanel />
                 }
+
 
             </View>
         )

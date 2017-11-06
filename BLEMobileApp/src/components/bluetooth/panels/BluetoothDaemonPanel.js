@@ -81,8 +81,8 @@
      }
 
      onTick = () => {
-         let {saveData, device} = this.props;
-         if (device == undefined){
+         let {saveData, device, fakeEnabled} = this.props;
+         if (device == undefined || fakeEnabled == fakeEnabled){
              return;
          }
          let randomRR = Math.floor(Math.random() * 300 + 500);
@@ -124,7 +124,8 @@
 
  const mapStateToProps = (state) => {
     return {
-        device: getConnectedSensor(state)
+        device: getConnectedSensor(state),
+        fakeEnabled: state.ble.fakeEnabled
     }
  }
 

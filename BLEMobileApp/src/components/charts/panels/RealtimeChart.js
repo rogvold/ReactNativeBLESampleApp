@@ -79,14 +79,24 @@
          pts = [{...pts[0], hr: 0}].concat(pts)
          let chartData = [pts];
 
+         if (Platform.OS == 'android'){
+             return null;
+         }
+
          return (
              <View style={{
                            borderRadius: mvConsts.littleRadius,
                            width: +defaultOptions.width + +defaultOptions.margin.left + +defaultOptions.margin.right,
                            height: +defaultOptions.height +defaultOptions.margin.top + +defaultOptions.margin.bottom
              }} >
-                 <SmoothLine data={chartData} options={defaultOptions} pallete={pallete}
-                            xKey='t' yKey='hr' />
+                 {Platform.OS == 'ios' ?
+                     <SmoothLine data={chartData} options={defaultOptions} pallete={pallete}
+                                 xKey='t' yKey='hr' /> :
+                     <View>
+                        <Text> </Text>
+                     </View>
+                 }
+
              </View>
          )
      }

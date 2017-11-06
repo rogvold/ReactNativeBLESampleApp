@@ -16,6 +16,8 @@ const initialState = {
     connectingSet: Set(),
     connectedSet: Set(),
 
+    fakeEnabled: false,
+
     dataMap: Map()
 
 }
@@ -122,6 +124,18 @@ const BluetoothReducer =  (state = initialState, action = {}) => {
             return {
                 ...state,
                 dataMap: consumeData(state.dataMap, action.deviceId, action.rrs)
+            }
+
+        case types.TURN_ON_FAKE:
+            return {
+                ...state,
+                fakeEnabled: true
+            }
+
+        case types.TURN_OFF_FAKE:
+            return {
+                ...state,
+                fakeEnabled: false
             }
 
 

@@ -21,8 +21,8 @@
       <file leaf-file-name="HomeApp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/apps/HomeApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="88" column="46" lean-forward="false" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
+            <state relative-caret-position="360">
+              <caret line="213" column="37" lean-forward="false" selection-start-line="213" selection-start-column="37" selection-end-line="213" selection-end-column="37" />
               <folding>
                 <element signature="e#139#178#0" expanded="true" />
                 <element signature="e#727#783#0" expanded="true" />
@@ -31,58 +31,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserSessionsPanel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/sessions/panels/UserSessionsPanel.js">
+      <file leaf-file-name="RecordReducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers/RecordReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="75" column="63" lean-forward="true" selection-start-line="75" selection-start-column="63" selection-end-line="75" selection-end-column="63" />
+            <state relative-caret-position="375">
+              <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
               <folding>
-                <element signature="e#43#82#0" expanded="true" />
-                <element signature="e#287#662#0" expanded="true" />
-                <element signature="e#752#808#0" expanded="true" />
+                <element signature="e#41#80#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploaderDaemon.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/record/panels/UploaderDaemon.js">
+      <file leaf-file-name="BluetoothReducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/reducers/BluetoothReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="125" column="40" lean-forward="true" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
+            <state relative-caret-position="224">
+              <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartStopSessionButton.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/sessions/buttons/StartStopSessionButton.js">
+      <file leaf-file-name="ActionTypes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/ActionTypes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="106" column="56" lean-forward="true" selection-start-line="106" selection-start-column="56" selection-end-line="106" selection-end-column="56" />
-              <folding>
-                <element signature="e#44#83#0" expanded="true" />
-                <element signature="e#632#688#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecordActions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/redux/actions/RecordActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="33" column="46" lean-forward="false" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+            <state relative-caret-position="330">
+              <caret line="242" column="26" lean-forward="false" selection-start-line="242" selection-start-column="13" selection-end-line="242" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KaaAPI.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/KaaAPI.js">
+      <file leaf-file-name="BluetoothActions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/redux/actions/BluetoothActions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="139" column="14" lean-forward="false" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="14" />
+            <state relative-caret-position="480">
+              <caret line="147" column="37" lean-forward="false" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -91,8 +76,8 @@
       <file leaf-file-name="ProfileApp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/apps/ProfileApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="98" column="58" lean-forward="false" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
+            <state relative-caret-position="210">
+              <caret line="115" column="51" lean-forward="false" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
               <folding>
                 <element signature="e#702#733#0" expanded="true" />
               </folding>
@@ -100,23 +85,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginForm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/auth/forms/LoginForm.js">
+      <file leaf-file-name="SettingsApp.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/apps/SettingsApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="37" column="7" lean-forward="false" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+            <state relative-caret-position="150">
+              <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KaaHelper.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/helpers/KaaHelper.js">
+      <file leaf-file-name="FakeSwitcherPanel.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/fake/FakeSwitcherPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="62" column="67" lean-forward="true" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
+            <state relative-caret-position="362">
+              <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
               <folding>
-                <element signature="e#0#40#0" expanded="false" />
+                <element signature="e#44#83#0" expanded="true" />
+                <element signature="e#632#688#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RealtimeChart.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/charts/panels/RealtimeChart.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="20" />
+              <folding>
+                <element signature="e#143#182#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,8 +123,8 @@
       <file leaf-file-name="BluetoothDaemonPanel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/bluetooth/panels/BluetoothDaemonPanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="131" column="12" lean-forward="true" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
+            <state relative-caret-position="375">
+              <caret line="84" column="62" lean-forward="false" selection-start-line="84" selection-start-column="62" selection-end-line="84" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -143,14 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SettingsApp</find>
-      <find>KeyboardSpacer</find>
-      <find>defa</find>
-      <find>currentUserId</find>
-      <find>DISCONNECT_DEVICE_FAIL</find>
-      <find>device</find>
-      <find>password</find>
-      <find>Пароль</find>
       <find>boun</find>
       <find>getUserPoints</find>
       <find>.connectedSet</find>
@@ -173,6 +163,14 @@
       <find>savePoints</find>
       <find>.savePoints</find>
       <find>uploadData</find>
+      <find>Platform</find>
+      <find>&lt;RealtimeChart</find>
+      <find>&lt;UserStatusS</find>
+      <find>deviceInfoPlaceholder</find>
+      <find>&lt;FakeSwitcherPanel</find>
+      <find>FakeSwitcherPanel</find>
+      <find>marginTop</find>
+      <find>TURN_OFF_FAKE</find>
     </findStrings>
     <replaceStrings>
       <replace>InitialApp</replace>
@@ -198,15 +196,11 @@
         <option value="$PROJECT_DIR$/src/components/apps/InitialApp.js" />
         <option value="$PROJECT_DIR$/src/components/animations/AnimationComponent.js" />
         <option value="$PROJECT_DIR$/src/components/buttons/KaaButton.js" />
-        <option value="$PROJECT_DIR$/src/components/charts/panels/RealtimeChart.js" />
         <option value="$PROJECT_DIR$/src/components/kaa/KaaTestPanel.js" />
-        <option value="$PROJECT_DIR$/src/components/apps/SettingsApp.js" />
         <option value="$PROJECT_DIR$/src/constants/mvConsts.js" />
         <option value="$PROJECT_DIR$/src/redux/actions/RecordReducer.js" />
-        <option value="$PROJECT_DIR$/src/redux/reducers/RecordReducer.js" />
         <option value="$PROJECT_DIR$/src/components/apps/App.js" />
         <option value="$PROJECT_DIR$/src/components/helpers/KaaHelper.js" />
-        <option value="$PROJECT_DIR$/src/components/bluetooth/panels/BluetoothDaemonPanel.js" />
         <option value="$PROJECT_DIR$/src/redux/actions/InitActions.js" />
         <option value="$PROJECT_DIR$/src/redux/actions/UsersActions.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
@@ -215,22 +209,27 @@
         <option value="$PROJECT_DIR$/src/components/users/panels/UserPanel.js" />
         <option value="$PROJECT_DIR$/src/redux/actions/RecordActions.js" />
         <option value="$PROJECT_DIR$/src/api/BluetoothAPI.js" />
-        <option value="$PROJECT_DIR$/src/redux/actions/BluetoothActions.js" />
-        <option value="$PROJECT_DIR$/src/redux/reducers/BluetoothReducer.js" />
         <option value="$PROJECT_DIR$/src/components/auth/forms/LoginForm.js" />
         <option value="$PROJECT_DIR$/src/components/auth/forms/SignupForm.js" />
         <option value="$PROJECT_DIR$/src/api/KaaAPI.js" />
         <option value="$PROJECT_DIR$/src/constants/config.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/redux/ActionTypes.js" />
         <option value="$PROJECT_DIR$/src/components/sessions/buttons/StartStopSessionButton.js" />
         <option value="$PROJECT_DIR$/src/components/bluetooth/panels/BluetoothDevicesPanel.js" />
         <option value="$PROJECT_DIR$/src/components/sessions/panels/UserSessionsPanels.js" />
-        <option value="$PROJECT_DIR$/src/components/apps/ProfileApp.js" />
-        <option value="$PROJECT_DIR$/src/components/apps/HomeApp.js" />
         <option value="$PROJECT_DIR$/src/components/sessions/panels/UserSessionsPanel.js" />
         <option value="$PROJECT_DIR$/src/components/record/panels/UploaderDaemon.js" />
         <option value="$PROJECT_DIR$/src/helpers/KaaHelper.js" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/RecordReducer.js" />
+        <option value="$PROJECT_DIR$/src/redux/ActionTypes.js" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/BluetoothReducer.js" />
+        <option value="$PROJECT_DIR$/src/redux/actions/BluetoothActions.js" />
+        <option value="$PROJECT_DIR$/src/components/charts/panels/RealtimeChart.js" />
+        <option value="$PROJECT_DIR$/src/components/apps/HomeApp.js" />
+        <option value="$PROJECT_DIR$/src/components/apps/SettingsApp.js" />
+        <option value="$PROJECT_DIR$/src/components/apps/ProfileApp.js" />
+        <option value="$PROJECT_DIR$/src/components/bluetooth/panels/BluetoothDaemonPanel.js" />
+        <option value="$PROJECT_DIR$/src/components/fake/FakeSwitcherPanel.js" />
       </list>
     </option>
   </component>
@@ -271,6 +270,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -495,6 +496,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="fake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BLEMobileApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BLEMobileApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BLEMobileApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BLEMobileApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="buttons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -589,8 +638,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -601,7 +648,7 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="daemon&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/record/panels/UploaderDaemon.js&#10;вфуьщт&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/record/panels/UploaderDaemon.js&#10;daemo&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/record/panels/UploaderDaemon.js&#10;userse&#9;null&#9;null&#10;hom&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/HomeApp.js&#10;kaa&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/helpers/KaaHelper.js&#10;re&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/RecordReducer.js&#10;rec&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/RecordReducer.js&#10;bluetoot&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/BluetoothReducer.js&#10;home&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/HomeApp.js&#10;uplo&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/record/panels/UploaderDaemon.js&#10;userp&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/users/panels/UserPanel.js&#10;nav&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/navigation/AppNavigator.js&#10;dae&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/bluetooth/panels/BluetoothDaemonPanel.js&#10;setti&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/SettingsApp.js&#10;act&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/actions/RecordActions.js&#10;he&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/helpers/KaaHelper.js&#10;help&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/helpers/KaaHelper.js&#10;cons&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/constants/mvConsts.js&#10;bl&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/actions/BluetoothActions.js&#10;devi&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/bluetooth/panels/BluetoothDevicesPanel.js&#10;api&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/api/BluetoothAPI.js&#10;device&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/bluetooth/panels/BluetoothDevicesPanel.js&#10;mv&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/constants/mvConsts.js&#10;blu&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/BluetoothReducer.js&#10;dev&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/bluetooth/panels/BluetoothDevicesPanel.js&#10;init&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/InitialApp.js&#10;cha&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/charts/panels/RealtimeChart.js&#10;фззтф&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/navigation/AppNavigator.js&#10;Hom&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/HomeApp.js&#10;bluet&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/BluetoothReducer.js&#10;sett&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/SettingsApp.js&#10;appn&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/navigation/AppNavigator.js&#10;settin&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/SettingsApp.js&#10;navi&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/navigation/AppNavigator.js&#10;кувг&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/BluetoothReducer.js" />
+    <property name="SearchEverywhereHistoryKey" value="dae&#9;null&#9;null&#10;pro&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/ProfileApp.js&#10;sett&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/SettingsApp.js&#10;swi&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/fake/FakeSwitcherPanel.js&#10;daemon&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/record/panels/UploaderDaemon.js&#10;вфуьщт&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/record/panels/UploaderDaemon.js&#10;daemo&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/record/panels/UploaderDaemon.js&#10;userse&#9;null&#9;null&#10;hom&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/HomeApp.js&#10;kaa&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/helpers/KaaHelper.js&#10;re&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/RecordReducer.js&#10;rec&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/RecordReducer.js&#10;bluetoot&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/BluetoothReducer.js&#10;home&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/HomeApp.js&#10;uplo&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/record/panels/UploaderDaemon.js&#10;userp&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/users/panels/UserPanel.js&#10;nav&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/navigation/AppNavigator.js&#10;setti&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/SettingsApp.js&#10;act&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/actions/RecordActions.js&#10;he&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/helpers/KaaHelper.js&#10;help&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/helpers/KaaHelper.js&#10;cons&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/constants/mvConsts.js&#10;bl&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/actions/BluetoothActions.js&#10;devi&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/bluetooth/panels/BluetoothDevicesPanel.js&#10;api&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/api/BluetoothAPI.js&#10;device&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/bluetooth/panels/BluetoothDevicesPanel.js&#10;mv&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/constants/mvConsts.js&#10;blu&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/BluetoothReducer.js&#10;dev&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/bluetooth/panels/BluetoothDevicesPanel.js&#10;init&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/InitialApp.js&#10;cha&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/charts/panels/RealtimeChart.js&#10;фззтф&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/navigation/AppNavigator.js&#10;Hom&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/HomeApp.js&#10;bluet&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/BluetoothReducer.js&#10;appn&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/navigation/AppNavigator.js&#10;settin&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/components/apps/SettingsApp.js&#10;navi&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/navigation/AppNavigator.js&#10;кувг&#9;FILE&#9;file:///Users/sabir/Documents/GitHub/ReactNativeBLESampleApp/BLEMobileApp/src/redux/reducers/BluetoothReducer.js" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -693,12 +740,13 @@
       <workItem from="1508871217627" duration="27923000" />
       <workItem from="1509307786125" duration="4106000" />
       <workItem from="1509695181307" duration="10612000" />
-      <workItem from="1509716357574" duration="3533000" />
+      <workItem from="1509716357574" duration="5730000" />
+      <workItem from="1509941947907" duration="5203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117574000" />
+    <option name="totallyTimeSpent" value="124974000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -711,10 +759,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="735" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2625202" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2657512" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9051322" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -722,7 +770,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.87558323" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.87558323" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -746,13 +794,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/navigation/AppNavigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/buttons/KaaButton.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -848,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/charts/panels/RealtimeChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="78" column="46" lean-forward="false" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/kaa/KaaTestPanel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -939,16 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/BluetoothActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding>
-            <element signature="e#41#80#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/constants/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -960,13 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/ActionTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="137" column="47" lean-forward="false" selection-start-line="137" selection-start-column="47" selection-end-line="137" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -992,32 +1009,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/apps/SettingsApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="106" column="71" lean-forward="false" selection-start-line="106" selection-start-column="71" selection-end-line="106" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/buttons/KaaButton.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="40" column="16" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/RecordReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/BluetoothReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,28 +1041,7 @@
         <state relative-caret-position="795">
           <caret line="55" column="46" lean-forward="false" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
           <folding>
-            <element signature="e#98#149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/apps/ProfileApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="98" column="58" lean-forward="false" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
-          <folding>
-            <element signature="e#702#733#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/apps/HomeApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="88" column="46" lean-forward="false" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
-          <folding>
-            <element signature="e#139#178#0" expanded="true" />
-            <element signature="e#727#783#0" expanded="true" />
+            <element signature="e#98#149#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1082,8 +1056,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/sessions/panels/UserSessionsPanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="75" column="63" lean-forward="true" selection-start-line="75" selection-start-column="63" selection-end-line="75" selection-end-column="63" />
+        <state relative-caret-position="630">
+          <caret line="75" column="63" lean-forward="false" selection-start-line="75" selection-start-column="63" selection-end-line="75" selection-end-column="63" />
           <folding>
             <element signature="e#43#82#0" expanded="true" />
             <element signature="e#287#662#0" expanded="true" />
@@ -1094,8 +1068,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/sessions/buttons/StartStopSessionButton.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="106" column="56" lean-forward="true" selection-start-line="106" selection-start-column="56" selection-end-line="106" selection-end-column="56" />
+        <state relative-caret-position="1065">
+          <caret line="106" column="56" lean-forward="false" selection-start-line="106" selection-start-column="56" selection-end-line="106" selection-end-column="56" />
           <folding>
             <element signature="e#44#83#0" expanded="true" />
             <element signature="e#632#688#0" expanded="true" />
@@ -1105,42 +1079,128 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/KaaAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="2085">
           <caret line="139" column="14" lean-forward="false" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/actions/RecordActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="33" column="46" lean-forward="false" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bluetooth/panels/BluetoothDaemonPanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="131" column="12" lean-forward="true" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/record/panels/UploaderDaemon.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="125" column="40" lean-forward="true" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
+        <state relative-caret-position="1380">
+          <caret line="125" column="40" lean-forward="false" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/helpers/KaaHelper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="62" column="67" lean-forward="true" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
+        <state relative-caret-position="475">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/RecordActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding>
+            <element signature="e#41#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/RecordReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding>
+            <element signature="e#41#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/ActionTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="242" column="26" lean-forward="false" selection-start-line="242" selection-start-column="13" selection-end-line="242" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/charts/panels/RealtimeChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="20" />
+          <folding>
+            <element signature="e#143#182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/apps/HomeApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="213" column="37" lean-forward="false" selection-start-line="213" selection-start-column="37" selection-end-line="213" selection-end-column="37" />
+          <folding>
+            <element signature="e#139#178#0" expanded="true" />
+            <element signature="e#727#783#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/apps/SettingsApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/apps/ProfileApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="115" column="51" lean-forward="false" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
+          <folding>
+            <element signature="e#702#733#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/actions/BluetoothActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="147" column="37" lean-forward="false" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/BluetoothReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/bluetooth/panels/BluetoothDaemonPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="84" column="62" lean-forward="false" selection-start-line="84" selection-start-column="62" selection-end-line="84" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/fake/FakeSwitcherPanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+          <folding>
+            <element signature="e#44#83#0" expanded="true" />
+            <element signature="e#632#688#0" expanded="true" />
           </folding>
         </state>
       </provider>

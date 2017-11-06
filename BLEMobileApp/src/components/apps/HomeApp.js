@@ -93,17 +93,23 @@
                  style={styles.device}>
 
                  <View style={styles.deviceInfoPlaceholder} >
-                     <View >
-                         <Text style={styles.name} >
-                             {device.name}
-                         </Text>
-                     </View>
 
-                     <View>
-                         <Text style={styles.deviceId} >
-                             {device.id}
-                         </Text>
-                     </View>
+                     {Platform.OS == 'android' ? null :
+                         <View >
+                             <Text style={styles.name} >
+                                 {device.name}
+                             </Text>
+                         </View>
+                     }
+
+                     {sessionTimestamp == undefined ?
+                         <View>
+                             <Text style={styles.deviceId} >
+                                 {device.id}
+                             </Text>
+                         </View> : null
+                     }
+
 
                      <StartStopSessionButton />
 

@@ -123,14 +123,29 @@ export function disconnectDevice(deviceId){
 }
 
 
-
-
 export function saveRRData(deviceId, rrs){
     return (dispatch, getState) => {
         return dispatch({
             type: types.SAVE_RR_DATA,
             rrs: rrs,
             deviceId: deviceId
+        })
+    }
+}
+
+//fake
+export function turnOnFake(){
+    return (dispatch, getState) => {
+        return dispatch({
+            type: types.TURN_ON_FAKE
+        })
+    }
+}
+
+export function turnOffFake(){
+    return (dispatch, getState) => {
+        return dispatch({
+            type: types.TURN_OFF_FAKE
         })
     }
 }

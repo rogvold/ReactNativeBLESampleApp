@@ -8,7 +8,7 @@ const initialState = {
 
     sessionTimestamp: undefined,
     loading: false,
-    uploadedSet: Set(),
+    uploadedSet: Set()
 
 }
 
